@@ -1,15 +1,15 @@
-import Header from "../src/components/Header";
+import Header from "../components/header/Header";
 import { Outlet } from "react-router-dom";
 
 const Root = () => {
     return (
-        <section>
+        <>
             <Header />
             <main>
                 <Outlet />
             </main>
             <footer>footer</footer>
-        </section>
+        </>
     );
 };
 

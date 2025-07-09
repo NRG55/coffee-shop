@@ -1,0 +1,12 @@
+.navbar {
+    ul {
+        display: flex;
+        gap: 3rem;
+        list-style-type: none;         
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }   
+}
