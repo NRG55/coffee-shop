@@ -1,0 +1,58 @@
+    [
+    {
+        "id": 1,  
+        "brand": "NRG Coffee",
+        "name": "Wild Bloom Coffee Co.",
+        "description": "Eco-conscious, outdoorsy coffee lovers.",
+        "price": 10.99   
+    },
+    {
+        "id": 2,   
+        "brand": "NRG Coffee",
+        "name": "Bolt Roast",
+        "description": "Fuel Your Hustle.",
+        "price": 12.99    
+    },
+    {
+        "id": 3,   
+        "brand": "NRG Coffee",
+        "name": "Café Luna",
+        "description": "Roasted Under the Stars",
+        "price": 14.99   
+    },
+    {
+        "id": 4,  
+        "brand": "NRG Coffee",
+        "name": "Grind Theory",
+        "description": "Brew. Think. Repeat.",
+        "price": 12.99   
+    },
+    {
+        "id": 5,
+        "brand": "NRG Coffee",
+        "name": "Macho Moka",
+        "description": "Strong. Smooth. Unapologetic.",
+        "price": 14.99    
+    },
+    {
+        "id": 6,  
+        "brand": "NRG Coffee",
+        "name": "Solstice Beans",
+        "description": "Balance in Every Brew.",
+        "price": 10.99    
+    },
+    {
+        "id": 5,
+        "brand": "NRG Coffee",
+        "name": "Peak Drip",
+        "description": "Brew Beyond Limits.",
+        "price": 14.99    
+    },
+    {
+        "Id": 6,  
+        "brand": "NRG Coffee",
+        "name": "Bean Junkie",
+        "description": "Your Daily Fix.",
+        "price": 10.99    
+    }
+]

@@ -1,5 +1,6 @@
 .section {
-    position: relative;  
+    position: relative;
+    align-content: center;  
     min-height: calc(100vh - 5rem);      
 }
 
@@ -26,4 +27,29 @@
     height: 100%; 
     background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.9) 100%);
     pointer-events: none;
+}
+
+.infoContainer {      
+    color: white;
+    max-width: 40%;
+    padding-left: 6rem;   
+
+    h1 {
+        font-size: 3rem;
+        padding-bottom: 2rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+        padding-bottom: 3rem;
+    }
+
+    button {
+        cursor: pointer;
+        border: none;
+        font-size: 1rem;
+        color: white;
+        padding: 1rem 2rem;
+        background-color: rgb(68, 41, 9);
+    }
 }
