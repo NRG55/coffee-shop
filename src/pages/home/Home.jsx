@@ -1,5 +1,6 @@
 import styles from './Home.module.css';
 import backgroundImage from '/src/images/background/home-background.jpg';
+import { Link } from 'react-router-dom';
 
 const Home = () => {   
     return (
@@ -10,7 +11,9 @@ const Home = () => {
             <div className={styles.infoContainer}>
                 <h1>Find Your Flavor</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo facilis, reprehenderit labore et ab nulla iusto corporis nihil blanditiis expedita.</p>
-                <button>Shop Now</button>
+                <Link to="./shop">
+                    <button className={styles.button}>Shop Now</button>
+                </Link>               
             </div>           
         </section>
     );

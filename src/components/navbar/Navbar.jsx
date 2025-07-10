@@ -1,10 +1,10 @@
 import styles from './Navbar.module.css';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
     return (
-        <nav className={styles.navbar}>
-            <ul>
+        <nav className={styles.navbar} >
+            <ul className={useLocation().pathname !== "/" ? styles.black : styles.white}>
                 <li>
                     <Link to="/">Home</Link>
                 </li>

@@ -1,10 +1,10 @@
-import data from '../data/products.json';
+import data from '../../data/products.json';
 
 const Shop = () => {
     return (
         <div>
             {data.map((product) => 
-                <div>{product.name}</div>
+                <div key={product.id}>{product.name}</div>
             )}
         </div>
     )

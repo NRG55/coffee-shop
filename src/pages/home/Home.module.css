@@ -42,14 +42,14 @@
     p {
         font-size: 1.5rem;
         padding-bottom: 3rem;
-    }
+    }  
+}
 
-    button {
-        cursor: pointer;
-        border: none;
-        font-size: 1rem;
-        color: white;
-        padding: 1rem 2rem;
-        background-color: rgb(68, 41, 9);
-    }
+.button {
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    color: white;
+    padding: 1rem 2rem;
+    background-color: rgb(68, 41, 9);
 }

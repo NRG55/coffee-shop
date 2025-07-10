@@ -42,14 +42,14 @@
         "price": 10.99    
     },
     {
-        "id": 5,
+        "id": 7,
         "brand": "NRG Coffee",
         "name": "Peak Drip",
         "description": "Brew Beyond Limits.",
         "price": 14.99    
     },
     {
-        "Id": 6,  
+        "Id": 8,  
         "brand": "NRG Coffee",
         "name": "Bean Junkie",
         "description": "Your Daily Fix.",
