@@ -49,7 +49,7 @@
         "price": 14.99    
     },
     {
-        "Id": 8,  
+        "id": 8,  
         "brand": "NRG Coffee",
         "name": "Bean Junkie",
         "description": "Your Daily Fix.",
