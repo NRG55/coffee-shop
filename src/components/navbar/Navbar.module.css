@@ -4,15 +4,37 @@
         gap: 3rem;
         list-style-type: none;         
     }
+    
+    li {
+        position: relative;
+        font-size: .9rem;
 
-    a {
-        text-decoration: none;      
-    }   
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;           
+            height: 1px;
+            bottom: -5px;
+            transform: scaleX(0%);
+            transition: all 0.3s;
+        }
+
+        &:hover {
+            &:before {
+            transform: scaleX(100%);
+            }
+        }
+    }    
 }
 
-.white {
+/* .white {
     a {
         color: white;
+    }
+
+    li:before {
+        background-color: white;
+
     }
 }
 
@@ -20,4 +42,8 @@
     a {
         color: black;
     }
-}
+
+    li:before {
+        background-color: black;
+    }
+} */

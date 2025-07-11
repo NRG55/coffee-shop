@@ -1,13 +1,41 @@
-header {
+a {
+    text-decoration: none;      
+} 
+
+.header {  
     position: sticky;
     top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 5rem; 
+    height: 3.5rem; 
     padding: 0 3rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 3px 0px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 
     img {
-        width: 2.5rem;
+        width: 2rem;
+    }
+}
+
+.black {   
+    a {
+        color: white;
+    }
+
+    li:before {
+        background-color: white;
+
+    }
+}
+
+.white {
+    background-color: white;
+    
+    a {
+        color: black;
+    }
+
+    li:before {
+        background-color: black;
     }
 }

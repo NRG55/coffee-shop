@@ -1,13 +1,13 @@
 .section {
     position: relative;
     align-content: center;  
-    min-height: calc(100vh - 5rem);      
+    min-height: calc(100vh - 3.5rem);      
 }
 
 .backgroundImageContainer {
     position: absolute;    
-    top: -5rem;    
-    height: calc(100% + 5rem);
+    top: -3.5rem;    
+    height: calc(100% + 3.5rem);
     width: 100%;
     z-index: -1;
 

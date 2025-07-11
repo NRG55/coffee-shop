@@ -4,15 +4,15 @@ import { Link, useLocation } from "react-router-dom";
 const Navbar = () => {
     return (
         <nav className={styles.navbar} >
-            <ul className={useLocation().pathname !== "/" ? styles.black : styles.white}>
+            <ul>
                 <li>
-                    <Link to="/">Home</Link>
+                    <Link to="/">HOME</Link>
                 </li>
                 <li>
-                    <Link to="/shop">Shop</Link>
+                    <Link to="/shop">SHOP</Link>
                 </li>
                 <li>
-                    <Link to="/about">About</Link>
+                    <Link to="/about">ABOUT</Link>
                 </li>
             </ul>
         </nav>

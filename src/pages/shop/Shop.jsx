@@ -1,13 +1,8 @@
-import data from '../../data/products.json';
-import Card from '../../components/card/Card';
+import CardsSection from '../../components/cardsSection/CardsSection';
 
 const Shop = () => {
     return (
-        <div>
-            {data.map((product) => 
-                <Card key={`card${product.id}`} product={product} />
-            )}
-        </div>
+        <CardsSection />
     )
 };
 
