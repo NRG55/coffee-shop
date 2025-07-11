@@ -1,7 +1,9 @@
-.cardsSection {
+.cardsSection {    
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, 250px);
+    justify-content: center;
     gap: 1.5rem;
     max-width: 1400px;
+    margin: auto;
     padding: 1.5rem;    
 }

@@ -1,8 +1,12 @@
+import Filter from '../../components/filter/Filter';
 import CardsSection from '../../components/cardsSection/CardsSection';
 
 const Shop = () => {
     return (
-        <CardsSection />
+        <>
+            <Filter />
+            <CardsSection />
+        </>
     )
 };
 

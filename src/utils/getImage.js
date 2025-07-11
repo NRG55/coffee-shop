@@ -1,5 +1,5 @@
 const getImage = (id) => {
-    return new URL(`../images/products/${id}.png`, import.meta.url).href;
+    return new URL(`../images/products/${id}.webp`, import.meta.url).href;
 };
 
 export default getImage;

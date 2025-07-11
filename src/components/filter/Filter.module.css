@@ -1,0 +1,18 @@
+ul {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    list-style-type: none;         
+}
+
+.filter {  
+    padding: .5rem 0;
+    font-size: .8rem;
+    text-transform: uppercase;
+    color:rgb(165, 106, 35);
+    background-color: rgb(250, 246, 240);    
+}
+
+li:hover {
+    color: black;
+}
