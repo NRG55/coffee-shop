@@ -1,12 +1,13 @@
+import styles from './Shop.module.css';
 import Filter from '../../components/filter/Filter';
 import CardsSection from '../../components/cardsSection/CardsSection';
 
 const Shop = () => {
-    return (
-        <>
+    return (       
+        <div className={styles.mainContainer}>
             <Filter />
             <CardsSection />
-        </>
+        </div>
     )
 };
 

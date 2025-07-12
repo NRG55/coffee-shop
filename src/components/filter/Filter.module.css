@@ -1,18 +1,88 @@
-ul {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    list-style-type: none;         
-}
-
-.filter {  
-    padding: .5rem 0;
-    font-size: .8rem;
-    text-transform: uppercase;
-    color:rgb(165, 106, 35);
+.filterContainer { 
+    padding: 1.5rem;
+    text-transform: uppercase;   
     background-color: rgb(250, 246, 240);    
 }
 
-li:hover {
+.inputsContainer {
+    display: grid;  
+}
+
+.inputWrapper {
+    position: relative;   
+    padding-left: 1.5rem;  
+    cursor: pointer;
+    font-size: .8rem;
+    color: rgb(165, 106, 35);    
+    background-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.inputWrapper input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.inputWrapper label {
+    display: flex;
+    align-items: center;
+    height: 1.8rem;
+    text-align: center;   
+}
+
+.checkmark {
+    position: absolute;
+    top: 50%;
+    left: 0; 
+    transform: translateY(-50%);   
+    height: .9rem;
+    width: .9rem;
+    border: solid 1px rgb(182, 179, 179);
+}
+
+.inputWrapper:hover {
+    color: black;
+
+    .checkmark {
+        border-color: rgb(128, 126, 126);
+    }
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.inputWrapper input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.inputWrapper .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 4px;
+  height: 9px;
+  border: solid rgb(24, 23, 23);
+  border-width: 0 1px 1px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.inputWrapper:hover {
     color: black;
 }
+
+
+
+ 
+
+  
+
