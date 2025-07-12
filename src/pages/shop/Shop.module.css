@@ -1,4 +1,6 @@
 .mainContainer {
     display: grid;
     grid-template-columns: 15rem auto;
+    max-width: 1400px;
+    margin: auto;
 }
