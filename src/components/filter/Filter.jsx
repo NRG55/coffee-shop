@@ -1,38 +1,39 @@
 import styles from './Filter.module.css';
 import data from '../../data/products.json';
 import { Link } from "react-router-dom";
+import { useParams } from 'react-router-dom';
 
-const Filter = () => { 
-    const categories = ["All", "Arabica", "Robusta", "Liberica", "Excelsa"];
+const Filter = () => {   
+    const types = ["Arabica", "Robusta", "Liberica", "Excelsa"];
     const setBrands = new Set(data.map((product) => product.brand));
-    const brands = [...setBrands];
+    const brands = ["all", ...setBrands]; 
+    let { brand } = useParams();     
 
     return (
         <>
             <div className={styles.filterContainer}> 
                 <div className={styles.section}>
-                    <h3>CATEGORY</h3>
+                    <h3>BRANDS</h3>
                     <div className={styles.buttonsContainer}>           
-                        {categories.map((category) =>
-                            <div key={category}>
-                                <Link to={`/shop/${category.toLowerCase()}`}>
-                                    <button >{category}</button>
-                                </Link>
-                                
+                        {brands.map((productBrand) =>
+                            <div key={productBrand}>
+                                <Link to={`/shop/${productBrand.replace(/\s+/g, '-').toLowerCase()}`}>
+                                    <button className={productBrand.toLowerCase() === brand.replace(/-/g, ' ') ? styles.active : styles.inactive} >{productBrand}</button>
+                                </Link>                                
                             </div>
                         )}
                     </div>
                 </div>
                 <div className={styles.section}>           
-                    <h3>BRANDS</h3>
+                    <h3>COFFEE TYPE</h3>
                     <div className={styles.inputsContainer}>           
-                        {brands.map((brand) =>
-                            <div key={brand} className={styles.inputWrapper}>                            
-                                <label htmlFor={brand}>{brand}
+                        {types.map((type) =>
+                            <div key={type} className={styles.inputWrapper}>                            
+                                <label htmlFor={type}>{type}
                                     <input
                                         type="checkbox"
-                                        id={brand}
-                                        name={brand} 
+                                        id={type}
+                                        name={type} 
                                     />
                                     <span className={styles.checkmark}></span>
                                 </label>

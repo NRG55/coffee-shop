@@ -4,8 +4,8 @@ import getProducts from '../../utils/filter';
 import { useParams } from 'react-router-dom';
 
 const CardsSection = () => {
-    const { category } = useParams();
-    const products = getProducts(category);   
+    const { brand } = useParams();
+    const products = getProducts(brand.replace(/-/g, ' '));   
 
     return (
         <section className={styles.cardsSection}>

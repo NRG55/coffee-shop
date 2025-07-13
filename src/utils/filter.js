@@ -1,11 +1,11 @@
 import data from '../data/products.json';
 
-const getProducts = (category) => {
-    if (category === "all") {
+const getProducts = (brand) => {
+    if (brand === "all") {
         return data;
     };
 
-    const products = data.filter((product) => product.type === category);
+    const products = data.filter((product) => product.brand.toLowerCase() === brand);    
 
     return products;
 };

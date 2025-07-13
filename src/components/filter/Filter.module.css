@@ -19,7 +19,7 @@
     button {
         height: 1.8rem;
         text-transform: uppercase;
-        color: rgb(75, 74, 74);
+        /* color: rgb(75, 74, 74); */
         font-family:Georgia, 'Times New Roman', Times, serif;
         font-size: .8rem;   
     }
@@ -28,8 +28,11 @@
         cursor: pointer;
         border: none;
         text-align: start;
-        width: 100%;      
-        background-color: transparent;        
+        width: 100%;         
+    }
+
+    label {
+         color: rgb(80, 79, 79);
     }
 
     label:hover {
@@ -46,6 +49,18 @@
         background-color: rgb(243, 229, 208);
     }
 }
+
+.active {
+     background-color: rgb(243, 229, 208);
+     color: rgb(218, 54, 54);
+}
+
+.inactive {
+    background-color: transparent;
+    color: rgb(80, 79, 79);
+}
+
+
 
 .section {
     padding-bottom: 1.5rem;

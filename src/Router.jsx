@@ -22,7 +22,7 @@ const Router = () => {
                             element: <Shop />, 
                             children: [
                                         { 
-                                            path: ':category',
+                                            path: ':brand',
                                             element: <CardsSection />
                                         }
                             ]
