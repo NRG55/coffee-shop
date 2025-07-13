@@ -1,11 +1,15 @@
 import styles from './CardsSection.module.css';
 import Card from "../card/Card";
-import data from '../../data/products.json';
+import getProducts from '../../utils/filter';
+import { useParams } from 'react-router-dom';
 
 const CardsSection = () => {
+    const { category } = useParams();
+    const products = getProducts(category);   
+
     return (
         <section className={styles.cardsSection}>
-            {data.map((product) => 
+            {products.map((product) => 
                 <Card key={`card${product.id}`} product={product} />
             )}
         </section>

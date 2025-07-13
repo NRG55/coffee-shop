@@ -4,6 +4,7 @@ import ErrorPage from "./pages/ErrorPage";
 import Home from "./pages/home/Home";
 import Shop from "./pages/shop/Shop";
 import About from "./pages/About";
+import CardsSection from "./components/cardsSection/CardsSection";
 
 const Router = () => {
     const router = createBrowserRouter([
@@ -12,9 +13,24 @@ const Router = () => {
             element: <Root />,
             errorElement: <ErrorPage />,
             children: [
-                { index: true, element: <Home /> },
-                { path: 'shop', element: <Shop />},
-                { path: 'about', element: <About />},
+                        { 
+                            index: true, 
+                            element: <Home /> 
+                        },
+                        { 
+                            path: 'shop', 
+                            element: <Shop />, 
+                            children: [
+                                        { 
+                                            path: ':category',
+                                            element: <CardsSection />
+                                        }
+                            ]
+                        },
+                        { 
+                            path: 'about', 
+                            element: <About />
+                        },
             ]
         }
     ]);

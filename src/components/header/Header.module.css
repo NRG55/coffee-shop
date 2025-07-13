@@ -40,3 +40,7 @@ a {
         background-color: black;
     }
 }
+
+.shadow {
+    background-color: rgba(0, 0, 0, 0.3);
+}

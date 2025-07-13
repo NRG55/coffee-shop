@@ -1,5 +1,5 @@
 import styles from './Navbar.module.css';
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
@@ -9,7 +9,7 @@ const Navbar = () => {
                     <Link to="/">HOME</Link>
                 </li>
                 <li>
-                    <Link to="/shop">SHOP</Link>
+                    <Link to="/shop/all">SHOP</Link>
                 </li>
                 <li>
                     <Link to="/about">ABOUT</Link>

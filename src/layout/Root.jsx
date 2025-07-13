@@ -8,7 +8,7 @@ const Root = () => {
             <main>
                 <Outlet />
             </main>
-            <footer>footer</footer>
+            <footer style={{height: '5rem'}}>footer</footer>
         </>
     );
 };
