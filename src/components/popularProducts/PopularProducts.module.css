@@ -1,5 +1,6 @@
 .section {
     background-color: #0b1618;
+   background-color: #091113;
     padding: 2rem 0;
 }
 
@@ -40,6 +41,6 @@
 .productPrice {
     justify-self: end;
     align-self: end;
-    font-size: 1.2rem;
-    color: rgb(247, 162, 51);
+    font-size: 1.2rem;   
+    color: rgb(201, 144, 92);
 }

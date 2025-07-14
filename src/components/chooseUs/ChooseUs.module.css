@@ -1,0 +1,57 @@
+.section {
+    background-color: #0b1618;
+    padding: 5rem 10rem;
+}
+
+.section h3 {
+    font-size: 1.5rem;
+    text-align: center; 
+    margin-bottom: 2rem;   
+    color: rgb(247, 245, 244);
+}
+
+.cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.card {
+    padding: 2rem;
+    color: white;
+    border: solid 1px  rgb(201, 144, 92, 0.4) 
+}
+
+.card h4 {
+    color: rgb(248, 246, 242);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.card span {
+    color: rgb(201, 144, 92) ;
+    margin-right: 1rem;
+}
+
+@media (max-width: 991px) {
+    .section {
+        padding: 6rem;
+    }
+
+    .section .cardsContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 2.5rem;
+    }
+
+    .section .cardsContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

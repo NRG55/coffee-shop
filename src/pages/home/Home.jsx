@@ -1,6 +1,7 @@
 import styles from './Home.module.css';
 import backgroundImage from '/src/images/background/home-background.jpg';
 import PopularProducts from '../../components/popularProducts/PopularProducts';
+import ChooseUs from '../../components/chooseUs/ChooseUs.';
 import { Link } from 'react-router-dom';
 
 const Home = () => {   
@@ -19,6 +20,7 @@ const Home = () => {
                 </div>                
             </section>
             <PopularProducts />
+            <ChooseUs />
         </>
     );
 };
