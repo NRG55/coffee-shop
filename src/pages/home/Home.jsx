@@ -14,7 +14,7 @@ const Home = () => {
                 <Link to="./shop/all">
                     <button className={styles.button}>Shop Now</button>
                 </Link>               
-            </div>           
+            </div>                
         </section>
     );
 };
