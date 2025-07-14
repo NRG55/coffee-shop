@@ -1,0 +1,105 @@
+.footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #091113;
+    padding: 3rem 5rem;
+}
+
+.footer .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+}
+
+.footer h2 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.footer .about p {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.footer .iconsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 2rem);
+    gap: 1rem;
+}
+
+.footer li {
+    list-style: none;
+}
+
+.footer .about a {      
+    display: grid;
+    width: 2rem;
+    height: 2rem;
+}
+
+.footer .about i {
+    color: rgb(201, 144, 92);
+    font-size: 2rem;
+}
+
+.footer .quicklinks {
+    position: relative;
+}
+
+.footer .quicklinks a {
+    display: inline-block;
+    color: white;
+    margin-bottom: .5rem;
+}
+
+.footer .contact .info li {
+    display: grid;
+    grid-template-columns: 1.5rem 1fr;   
+    margin-bottom: .5rem;
+}
+
+.footer .contact span {
+    display: grid;
+    align-items: center;  
+    height: 100%;
+    font-size: .8rem;
+    color: white;
+
+    i {
+        align-self: center;
+        color: rgb(201, 144, 92)
+    }
+}
+
+.footer .contact a {
+    color: white;
+}
+
+.copyright {    
+    color: white;
+    width: 100%;
+    text-align: center;
+    background-color: #091113;
+    padding: 1rem 0;
+    border-top: solid 1px  rgb(201, 144, 92, 0.4);
+}
+
+@media (max-width: 991px) {
+    .footer {
+        padding: 2.5rem;
+    }
+
+    .footer .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer .container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
