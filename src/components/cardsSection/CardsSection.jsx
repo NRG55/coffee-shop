@@ -8,10 +8,12 @@ const CardsSection = () => {
     const products = getProducts(brand.replace(/-/g, ' '));   
 
     return (
-        <section className={styles.cardsSection}>
-            {products.map((product) => 
-                <Card key={`card${product.id}`} product={product} />
-            )}
+        <section>
+            <div className={styles.container}>
+                {products.map((product) => 
+                    <Card key={`card${product.id}`} product={product} />
+                )}
+            </div>
         </section>
     );
 };

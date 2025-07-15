@@ -6,12 +6,20 @@ a {
     position: sticky;
     top: 0;
     display: flex;
+    justify-content: center;  
+    align-items: center;
+    height: 3rem;    
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 3px 0px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    z-index: 10;  
+}
+
+.container {
+    display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
-    height: 3rem; 
-    padding: 0 3rem;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 3px 0px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    z-index: 10;
+    max-width: 1400px;
+    padding: 0 1.5rem;  
 
     img {
         width: 2rem;
@@ -25,7 +33,6 @@ a {
 
     li:before {
         background-color: white;
-
     }
 }
 
@@ -42,5 +49,5 @@ a {
 }
 
 .shadow {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
 }

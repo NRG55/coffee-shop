@@ -1,0 +1,30 @@
+.container { 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    justify-self: start;  
+    border: 1px solid rgb(221, 219, 219);     
+}
+
+.button {   
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    height: auto;
+    border: none;
+}
+
+.numberInput { 
+    min-height: 2rem;  
+    max-width: 2rem; 
+    text-align: center;   
+    border: none;
+    outline: none;
+    margin: 0; 
+}
+
+.container input::-webkit-outer-spin-button,
+.container input::-webkit-inner-spin-button {
+    -webkit-appearance: none;   
+}
+

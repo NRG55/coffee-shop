@@ -1,17 +1,21 @@
 import styles from './Card.module.css';
 import getImage from "../../utils/getImage";
+import { Link } from 'react-router-dom';
 
-const Card = ( {product} ) => {
+const Card = ({ product }) => {
     const imageUrl = getImage(product.id);
+
     return (
         <article className={styles.card}>
-            <div className={styles.imageContainer}>
-                <img src={imageUrl} alt="product"/>
-            </div>
-            <div>
-                <p>{product.name}</p>
-                <p>€{product.price}</p>
-            </div>
+            <Link to={`/product/${product.brand.replace(/\s+/g, '-').toLowerCase()}/${product.id}`}>
+                <div className={styles.imageContainer}>
+                    <img src={imageUrl} alt="product"/>
+                </div>
+                <div>
+                    <p>{product.name}</p>
+                    <p>€{product.price}</p>
+                </div>
+            </Link>
         </article>
     );
 };

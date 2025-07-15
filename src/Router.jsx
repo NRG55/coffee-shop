@@ -5,6 +5,7 @@ import Home from "./pages/home/Home";
 import Shop from "./pages/shop/Shop";
 import About from "./pages/About";
 import CardsSection from "./components/cardsSection/CardsSection";
+import ProductPage from "./pages/productPage/ProductPage";
 
 const Router = () => {
     const router = createBrowserRouter([
@@ -31,6 +32,10 @@ const Router = () => {
                             path: 'about', 
                             element: <About />
                         },
+                        { 
+                            path: 'product/:brand/:id', 
+                            element: <ProductPage /> 
+                        }
             ]
         }
     ]);

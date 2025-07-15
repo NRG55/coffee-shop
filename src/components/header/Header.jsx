@@ -25,13 +25,15 @@ const Header = () => {
                                 ${isHeaderBackground &&
                                 useLocation().pathname === "/" ? styles.shadow : ""}                            
                             `}>
-                <div>
-                    <Link to="/">
-                        <img src={logo} alt="Logo"/>
-                    </Link>
+                <div className={styles.container}>               
+                    <div>
+                        <Link to="/">
+                            <img src={logo} alt="Logo"/>
+                        </Link>
+                    </div>
+                    <Navbar />
+                    <div>Cart</div>
                 </div>
-                <Navbar />
-                <div>Cart</div>
             </header>
             {!isHeaderBackground &&
              useLocation().pathname === "/" ? <ScrollDownArrow /> : null}
