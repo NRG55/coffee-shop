@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {   
     return (
-        <>
+        <div className={styles.container}>
             <section className={styles.section}>
                 <div className={styles.backgroundImageContainer}>
                     <img src={backgroundImage} alt=""/>
@@ -21,7 +21,7 @@ const Home = () => {
             </section>
             <PopularProducts />
             <ChooseUs />
-        </>
+        </div>
     );
 };
 

@@ -4,38 +4,42 @@ import logo from '/src/images/logo/logo.png';
 import Navbar from "../navbar/Navbar";
 import ScrollDownArrow from '../scrollDownArrow/ScrollDownArrow';
 import { useState } from 'react';
+import ShoppingCartButton from '../shoppingCartButton/ShoppingCartButton';
 
 const Header = () => {
-    const [isHeaderBackground, setHeaderBackground] = useState(false);
+    const [isHeaderTransparent, setHeaderTransparent] = useState(true);
 
-    const changeHeaderBackground = () => {
+    const setHeaderNonTransparent = () => {
         if (window.scrollY >= 1) {
-            return setHeaderBackground(true);
+            return setHeaderTransparent(false);
         };
 
-        setHeaderBackground(false);
+        setHeaderTransparent(true);
     };
 
-    window.addEventListener("scroll", changeHeaderBackground);
-
+    window.addEventListener("scroll", setHeaderNonTransparent);
+ 
     return (
         <>
-            <header className={`${styles.header } 
-                                ${useLocation().pathname === "/" ? styles.black : styles.white}
-                                ${isHeaderBackground &&
-                                useLocation().pathname === "/" ? styles.shadow : ""}                            
-                            `}>
-                <div className={styles.container}>               
+            <header className={styles.header }>
+                <div className={`${styles.container} 
+                                ${useLocation().pathname === "/" ? styles.whiteTextAndIcon : styles.blackTextAndIcon}
+                                ${!isHeaderTransparent &&
+                                useLocation().pathname === "/" ? styles.blackBackground : ""}
+                                ${!isHeaderTransparent &&
+                                useLocation().pathname !== "/" ? styles.whiteBackground : ""}                            
+                                `}
+                >               
                     <div>
                         <Link to="/">
                             <img src={logo} alt="Logo"/>
                         </Link>
                     </div>
                     <Navbar />
-                    <div>Cart</div>
-                </div>
+                    <ShoppingCartButton />                   
+                </div>                
             </header>
-            {!isHeaderBackground &&
+            {isHeaderTransparent &&
              useLocation().pathname === "/" ? <ScrollDownArrow /> : null}
         </>                            
                           

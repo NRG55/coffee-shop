@@ -1,79 +1,60 @@
     [
     {
         "id": 1,  
-        "brand": "NRG Coffee",
-        "name": "Wild Bloom",
-        "type": "liberica",
+        "brand": "DASS COFFEE",
+        "name": "Huehuetenango",
         "weight": 250,
-        "price": 10.99, 
-        "description": "Eco-conscious, outdoorsy coffee lovers."
-          
+        "type": "robusta",
+        "price": 8.99,
+        "description": "These beans, cultivated with great difficulty among the volcanoes surrounding the coffee fields of the Huehuetenango region and containing fruit-chocolate flavors, have a unique flavor with their balanced acidity and high body!"    
+    },
+     {
+        "id": 2,  
+        "brand": "DASS COFFEE",
+        "name": "Sidamo",
+        "type": "arabica",
+        "weight": 250,
+        "price": 8.99,
+        "description": "The beans, grown on vast coffee fields under the scorching sun, will introduce you to this unique atmosphere from your first sip! Experience the taste of coffee in your soul with Sidamo beans, from the capital of coffee, with their chocolate-woody flavors!"          
+    }, 
+    {
+        "id": 3,  
+        "brand": "DASS COFFEE",
+        "name": "Dali",
+        "type": "arabica",
+        "weight": 250,
+        "price": 8.99,
+        "description": "With its rich blend of coffee beans, a blend that blends well with milk, and a dark roast, Dali Blend will be your first choice for espresso-based coffees! The dominant cocoa and tobacco aromas of the Afro-Pacific region deliver the flavor you're looking for for a unique coffee experience!"        
+    },   
+    {
+        "id": 4,
+        "brand": "DASS COFFEE",
+        "name": "Beo Lempira",
+        "type": "arabica",
+        "weight": 250,
+        "price": 8.99,
+        "description": "Honduran beans, originating from the fertile lands of South America, have low acidity and a dense body due to the harsh climate they inhabit. With their tropical flavors, featuring fruity and woody aromas, they are poised to be your top choice for a long time to come!"           
     },
     {
-        "id": 2,   
-        "brand": "NRG Coffee",
-        "name": "Bolt Roast",
+        "id": 5,  
+        "brand": "DASS COFFEE",
+        "name": "Yellow Bourbon",
         "type": "robusta",
         "weight": 250,
-        "price": 12.99,
-        "description": "Fuel Your Hustle."          
+        "price": 8.99,
+        "description": "Prepared with premium beans from Brazil, the world's largest coffee producer, Yellow Bourbon offers an exceptional coffee experience with its hazelnut and walnut-infused aroma. Its balanced flavor and profile, perfect for Turkish palates, make it a favorite among coffee lovers!"    
     },
     {
-        "id": 3,   
-        "brand": "NRG Coffee",
-        "name": "Café Luna",
+        "id": 6,
+        "brand": "DASS COFFEE",
+        "name": "Medellin",
         "type": "excelsa",
         "weight": 250,
-        "price": 14.99,
-        "description": "Roasted Under the Stars"        
-    },
+        "price": 8.99,
+        "description": "Specially cultivated in Medellin, Colombia, famous for its Arabica coffee beans, the qualified Supremo beans appeal to true filter coffee enthusiasts with their sugary-fruity aroma and balanced tasting characteristics!"           
+    }, 
     {
-        "id": 4,  
-        "brand": "NRG Coffee",
-        "name": "Grind Theory",
-        "type": "liberica",
-        "weight": 250,
-        "price": 12.99,
-        "description": "Brew. Think. Repeat."          
-    },
-    {
-        "id": 5,
-        "brand": "NRG Coffee",
-        "name": "Macho Moka",
-        "type": "liberica",
-        "weight": 250,
-        "price": 14.99,
-        "description": "Strong. Smooth. Unapologetic."         
-    },
-    {
-        "id": 6,  
-        "brand": "NRG Coffee",
-        "name": "Solstice Beans",
-        "type": "excelsa",
-        "weight": 250,
-        "price": 10.99,
-        "description": "Balance in Every Brew."          
-    },
-    {
-        "id": 7,
-        "brand": "NRG Coffee",
-        "name": "Peak Drip",
-        "type": "liberica",
-        "weight": 250,
-        "price": 14.99,
-        "description": "Brew Beyond Limits."          
-    },
-    {
-        "id": 8,  
-        "brand": "NRG Coffee",
-        "name": "Bean Junkie",
-        "type": "excelsa",
-        "weight": 250,
-        "price": 12.99,
-        "description": "Your Daily Fix."         
-    },
-    {
-        "id": 9,  
+        "id": 7,  
         "brand": "WR4",
         "name": "Plutonio",
         "type": "arabica",
@@ -82,7 +63,7 @@
         "description": "The Plutonio roast is a full-bodied coffee with low acidity and bitterness. Ideal for French press, Italian Moka pot, and espresso."          
     },
     {
-        "id": 10,  
+        "id": 8,  
         "brand": "WR4",
         "name": "27",
         "type": "robusta",
@@ -91,7 +72,7 @@
         "description": "Roast 27 is balanced in acidity, sweetness and bitterness, a medium roast coffee recommended for all methods, ideal for espresso and filter, balanced."           
     },
     {
-        "id": 11,  
+        "id": 9,  
         "brand": "WR4",
         "name": "Chameleon",
         "type": "arabica",
@@ -100,7 +81,7 @@
         "description": "The Chameleon roast is a coffee suitable for all types of methods, which never repeats the same formula or type of roast, only maintaining quality."     
     },
     {
-        "id": 12,  
+        "id": 10,  
         "brand": "WR4",
         "name": "Valentina",
         "type": "liberica",
@@ -109,59 +90,77 @@
         "description": "The Valentina roast is a coffee with very low bitterness, intense acidity and sweetness, both in aroma and flavor. Ideal for drip coffee."          
     },
     {
-        "id": 13,
-        "brand": "DASS•COFFEE",
-        "name": "Medellin",
+        "id": 11,  
+        "brand": "NRG Coffee",
+        "name": "Wild Bloom",
+        "type": "liberica",
+        "weight": 250,
+        "price": 10.99, 
+        "description": "Eco-conscious, outdoorsy coffee lovers."          
+    },
+    {
+        "id": 12,   
+        "brand": "NRG Coffee",
+        "name": "Bolt Roast",
+        "type": "robusta",
+        "weight": 250,
+        "price": 12.99,
+        "description": "Fuel Your Hustle."          
+    },
+    {
+        "id": 13,   
+        "brand": "NRG Coffee",
+        "name": "Café Luna",
         "type": "excelsa",
         "weight": 250,
-        "price": 8.99,
-        "description": "Specially cultivated in Medellin, Colombia, famous for its Arabica coffee beans, the qualified Supremo beans appeal to true filter coffee enthusiasts with their sugary-fruity aroma and balanced tasting characteristics!"           
+        "price": 14.99,
+        "description": "Roasted Under the Stars"        
     },
     {
         "id": 14,  
-        "brand": "DASS•COFFEE",
-        "name": "Dali",
-        "type": "arabica",
+        "brand": "NRG Coffee",
+        "name": "Grind Theory",
+        "type": "liberica",
         "weight": 250,
-        "price": 8.99,
-        "description": "With its rich blend of coffee beans, a blend that blends well with milk, and a dark roast, Dali Blend will be your first choice for espresso-based coffees! The dominant cocoa and tobacco aromas of the Afro-Pacific region deliver the flavor you're looking for for a unique coffee experience!"        
+        "price": 12.99,
+        "description": "Brew. Think. Repeat."          
     },
     {
-        "id": 15,  
-        "brand": "DASS•COFFEE",
-        "name": "Sidamo",
-        "type": "arabica",
+        "id": 15,
+        "brand": "NRG Coffee",
+        "name": "Macho Moka",
+        "type": "liberica",
         "weight": 250,
-        "price": 8.99,
-        "description": "The beans, grown on vast coffee fields under the scorching sun, will introduce you to this unique atmosphere from your first sip! Experience the taste of coffee in your soul with Sidamo beans, from the capital of coffee, with their chocolate-woody flavors!"          
+        "price": 14.99,
+        "description": "Strong. Smooth. Unapologetic."         
     },
     {
-        "id": 16,
-        "brand": "DASS•COFFEE",
-        "name": "Beo Lempira",
-        "type": "arabica",
+        "id": 16,  
+        "brand": "NRG Coffee",
+        "name": "Solstice Beans",
+        "type": "excelsa",
         "weight": 250,
-        "price": 8.99,
-        "description": "Honduran beans, originating from the fertile lands of South America, have low acidity and a dense body due to the harsh climate they inhabit. With their tropical flavors, featuring fruity and woody aromas, they are poised to be your top choice for a long time to come!"           
+        "price": 10.99,
+        "description": "Balance in Every Brew."          
     },
     {
-        "id": 17,  
-        "brand": "DASS•COFFEE",
-        "name": "Brazil Yellow Bourbon",
-        "type": "robusta",
+        "id": 17,
+        "brand": "NRG Coffee",
+        "name": "Peak Drip",
+        "type": "liberica",
         "weight": 250,
-        "price": 8.99,
-        "description": "Prepared with premium beans from Brazil, the world's largest coffee producer, Yellow Bourbon offers an exceptional coffee experience with its hazelnut and walnut-infused aroma. Its balanced flavor and profile, perfect for Turkish palates, make it a favorite among coffee lovers!"    
+        "price": 14.99,
+        "description": "Brew Beyond Limits."          
     },
     {
         "id": 18,  
-        "brand": "DASS•COFFEE",
-        "name": "Guatemala Huehuetenango",
+        "brand": "NRG Coffee",
+        "name": "Bean Junkie",
+        "type": "excelsa",
         "weight": 250,
-        "type": "robusta",
-        "price": 8.99,
-        "description": "These beans, cultivated with great difficulty among the volcanoes surrounding the coffee fields of the Huehuetenango region and containing fruit-chocolate flavors, have a unique flavor with their balanced acidity and high body!"    
-    },
+        "price": 12.99,
+        "description": "Your Daily Fix."         
+    },   
     {
         "id": 19,  
         "brand": "COLOMBIAN BREW",

@@ -14,13 +14,20 @@
 }
 
 .footer h2 {
+    font-weight: 600;
     color: white;
     margin-bottom: 1rem;
 }
 
+.footer p,
+.footer a {
+    font-size: .9rem;
+    font-weight: 300;
+}
+
 .footer .about p {
     color: white;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem;   
 }
 
 .footer .iconsContainer {
@@ -77,7 +84,9 @@
     color: white;
 }
 
-.copyright {    
+.copyright { 
+    font-size: .9rem;
+    font-weight: 400;   
     color: white;
     width: 100%;
     text-align: center;

@@ -35,9 +35,9 @@ const PopularProducts = () => {
                             <div className={styles.imageWrapper}>                        
                                 <img src={getImage(product.id)}/> 
                             </div>
-                            <div className={styles.productInfo}>
-                                <div className={styles.productBrand}>{product.brand}</div>
+                            <div className={styles.productInfo}>                               
                                 <div className={styles.productName}>{product.name}</div>
+                                <div className={styles.productBrand}>{product.brand}</div>
                                 <div className={styles.productPrice}>€{product.price}</div>
                             </div>                                          
                         </SwiperSlide>

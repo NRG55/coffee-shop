@@ -14,39 +14,50 @@ a {
 
 .container {
     display: flex;
+    height: 100%;
     width: 100%;
     justify-content: space-between;
     align-items: center;
     max-width: 1400px;
-    padding: 0 1.5rem;  
+    padding: 0 1.5rem;    
 
     img {
         width: 3rem;
     }
 }
 
-.black {   
+.whiteTextAndIcon {   
     a {
         color: white;
     }
 
-    li:before {
+    a:before {
         background-color: white;
     }
+
+    .header {
+        background-color: white;
+    }   
 }
 
-.white {
-    background-color: white;
-
+.blackTextAndIcon {   
     a {
         color: black;
     }
 
-    li:before {
+    a:before {
         background-color: black;
     }
+
+    .header {
+        background-color: black;
+    }   
 }
 
-.shadow {
+.blackBackground {
     background-color: rgba(0, 0, 0, 0.6);
+}
+
+.whiteBackground {
+    background-color: white;
 }

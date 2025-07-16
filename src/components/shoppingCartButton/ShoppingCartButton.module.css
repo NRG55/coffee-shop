@@ -1,0 +1,22 @@
+.button {
+    cursor: pointer;
+    position: relative;
+    display: grid;
+    justify-items: end;
+    background-color: transparent;    
+    border: none;
+}
+
+.counter {
+    position: absolute;
+    top: -.2rem;
+    right: -.3rem;  
+    display: grid;
+    place-items: center;
+    background-color: rgb(245, 64, 64);  
+    color: white;
+    width: 16px;
+    height: 16px;
+    font-weight: bold;
+    border-radius: 50%;   
+}

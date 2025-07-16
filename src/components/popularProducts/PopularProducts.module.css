@@ -1,11 +1,12 @@
 .section {
     background-color: #0b1618;
-   background-color: #091113;
+    background-color: #091113;
     padding: 2rem 0;
 }
 
 .section h3 {
-    font-size: 1.5rem;
+    font-size: 1.5rem;   
+    font-weight: 400;
     text-align: center;    
     color: rgb(247, 245, 244);
 }
@@ -25,16 +26,18 @@
 .productInfo {    
     display: grid;
     width: 100%;  
-    grid-template-rows: 1.5rem 1.5rem auto ;
+    grid-template-rows: 1fr 1fr auto ;
+    grid-template-rows: min-content;
     color: white;  
 }
 
-.productBrand {
+.productName {
     font-size: 1.2rem;
     color: rgb(204, 199, 199);
 }
 
-.productName {  
+.productBrand { 
+    font-size: .8rem; 
     color:  #97c3ca;
 }
 

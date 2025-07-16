@@ -4,7 +4,8 @@
 }
 
 .section h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 400;
     text-align: center; 
     margin-bottom: 2rem;   
     color: rgb(247, 245, 244);
@@ -26,6 +27,11 @@
     color: rgb(248, 246, 242);
     font-size: 1.2rem;
     margin-bottom: 1rem;
+}
+
+.card p {
+    font-size: .9rem;
+    font-weight: 300;
 }
 
 .card span {

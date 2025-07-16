@@ -5,7 +5,7 @@
     
     h3 {
         font-size: 1rem;
-        font-weight: 100;
+        font-weight: 600;
         padding-bottom: .5rem;
         color: rgb(119, 72, 14);
     }
@@ -20,20 +20,15 @@
     button {
         height: 1.8rem;
         text-transform: uppercase;
-        /* color: rgb(75, 74, 74); */
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        font-size: .8rem;   
+        font-size: .9rem;
+        font-weight: 350;   
     }
-    
+
     button {
         cursor: pointer;
         border: none;
         text-align: start;
         width: 100%;         
-    }
-
-    label {
-         color: rgb(80, 79, 79);
     }
 
     label:hover {
@@ -53,15 +48,12 @@
 
 .active {
      background-color: rgb(243, 229, 208);
-     color: rgb(218, 54, 54);
+     color: rgb(245, 64, 64);
 }
 
 .inactive {
-    background-color: transparent;
-    color: rgb(80, 79, 79);
+    background-color: transparent;    
 }
-
-
 
 .section {
     padding-bottom: 1.5rem;
@@ -114,25 +106,25 @@
 }
 
 .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
+    content: "";
+    position: absolute;
+    display: none;
 }
 
 .inputWrapper input:checked ~ .checkmark:after {
-  display: block;
+    display: block;
 }
 
 .inputWrapper .checkmark:after {
-  left: 4px;
-  top: 1px;
-  width: 4px;
-  height: 9px;
-  border: solid rgb(24, 23, 23);
-  border-width: 0 1px 1px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 9px;
+    border: solid rgb(24, 23, 23);
+    border-width: 0 1px 1px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 .inputWrapper:hover {
