@@ -1,3 +1,66 @@
+.section {
+    height: 100vh;    
+}
+
 .container {
-    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 3rem 8rem;
+    gap: 4rem; 
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 150%;     
+}
+
+.imageWrapper img {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     
+}
+
+.productInfoWrapper h2 {
+    font-size: 2rem;
+    color: rgb(131, 86, 3);
+    margin-bottom: .5rem;
+}
+
+.productInfoWrapper .weight {
+    font-size: .9rem;
+    margin-bottom: 2rem;
+}
+
+.productInfoWrapper .price {
+    font-size: 1.3rem;
+    margin-bottom: 5rem;
+}
+
+.productInfoWrapper .description {    
+    margin-bottom: 2rem;
+}
+
+.addToCartContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: fit-content;
+    gap: .5rem;
+}
+
+.addToCartContainer .button {
+    cursor: pointer;
+    background-color: rgb(201, 144, 92);
+    color: white;
+    border: solid 1px rgb(182, 135, 49);
+}
+
+.addToCartContainer .button:hover {   
+    background-color: transparent;
+    color: rgb(182, 135, 49);
+    border: solid 1px rgb(182, 135, 49);
 }

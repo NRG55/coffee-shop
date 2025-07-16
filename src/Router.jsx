@@ -33,7 +33,7 @@ const Router = () => {
                             element: <About />
                         },
                         { 
-                            path: 'product/:brand/:id', 
+                            path: 'product/:brand/:productId', 
                             element: <ProductPage /> 
                         }
             ]
