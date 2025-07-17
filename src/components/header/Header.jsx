@@ -6,9 +6,11 @@ import ScrollDownArrow from '../scrollDownArrow/ScrollDownArrow';
 import { useState } from 'react';
 import ShoppingCartButton from '../shoppingCartButton/ShoppingCartButton';
 
-const Header = () => {
+const Header = ({ productsQuantityInCart }) => {
     const [isHeaderTransparent, setHeaderTransparent] = useState(true);
 
+    const { pathname } = useLocation();
+  
     const setHeaderNonTransparent = () => {
         if (window.scrollY >= 1) {
             return setHeaderTransparent(false);
@@ -23,11 +25,11 @@ const Header = () => {
         <>
             <header className={styles.header }>
                 <div className={`${styles.container} 
-                                ${useLocation().pathname === "/" ? styles.whiteTextAndIcon : styles.blackTextAndIcon}
+                                ${pathname === "/" ? styles.whiteTextAndIcon : styles.blackTextAndIcon}
                                 ${!isHeaderTransparent &&
-                                useLocation().pathname === "/" ? styles.blackBackground : ""}
+                                pathname === "/" ? styles.blackBackground : ""}
                                 ${!isHeaderTransparent &&
-                                useLocation().pathname !== "/" ? styles.whiteBackground : ""}                            
+                                pathname !== "/" ? styles.whiteBackground : ""}                            
                                 `}
                 >               
                     <div>
@@ -36,7 +38,7 @@ const Header = () => {
                         </Link>
                     </div>
                     <Navbar />
-                    <ShoppingCartButton />                   
+                    <ShoppingCartButton productsQuantityInCart={productsQuantityInCart} />                   
                 </div>                
             </header>
             {isHeaderTransparent &&

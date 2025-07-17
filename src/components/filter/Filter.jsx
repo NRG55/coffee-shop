@@ -6,14 +6,14 @@ import { useParams } from 'react-router-dom';
 const Filter = () => {   
     const types = ["Arabica", "Robusta", "Liberica", "Excelsa"];
     const setBrands = new Set(data.map((product) => product.brand));
-    const brands = ["all", ...setBrands]; 
+    const brands = ["All", ...setBrands]; 
     let { brand } = useParams();     
 
     return (
         <>
             <div className={styles.filterContainer}> 
                 <div className={styles.section}>
-                    <h3>BRANDS</h3>
+                    <h3>Brands</h3>
                     <div className={styles.buttonsContainer}>           
                         {brands.map((productBrand) =>
                             <div key={productBrand}>
@@ -25,7 +25,7 @@ const Filter = () => {
                     </div>
                 </div>
                 <div className={styles.section}>           
-                    <h3>COFFEE TYPE</h3>
+                    <h3>Coffee Type</h3>
                     <div className={styles.inputsContainer}>           
                         {types.map((type) =>
                             <div key={type} className={styles.inputWrapper}>                            

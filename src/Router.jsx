@@ -7,11 +7,11 @@ import About from "./pages/About";
 import CardsSection from "./components/cardsSection/CardsSection";
 import ProductPage from "./pages/productPage/ProductPage";
 
-const Router = () => {
+const Router = ({ productsQuantityInCart, addProductToCart }) => {   
     const router = createBrowserRouter([
         {
             path:'/',
-            element: <Root />,
+            element: <Root productsQuantityInCart={productsQuantityInCart} />,
             errorElement: <ErrorPage />,
             children: [
                         { 
@@ -34,7 +34,7 @@ const Router = () => {
                         },
                         { 
                             path: 'product/:brand/:productId', 
-                            element: <ProductPage /> 
+                            element: <ProductPage addProductToCart={addProductToCart} /> 
                         }
             ]
         }

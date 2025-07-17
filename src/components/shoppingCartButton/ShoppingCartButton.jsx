@@ -2,7 +2,7 @@ import styles from './ShoppingCartButton.module.css';
 import { ShoppingCart } from "lucide-react";
 import { useLocation } from "react-router-dom";
 
-const ShoppingCartButton = () => {
+const ShoppingCartButton = ({ productsQuantityInCart }) => {
     return (
         <button className={styles.button}>
             <ShoppingCart 
@@ -12,7 +12,7 @@ const ShoppingCartButton = () => {
             <span
                 className={styles.counter}               
             >
-            <small>5</small>
+            <small>{productsQuantityInCart}</small>
             </span>
         </button>
     );

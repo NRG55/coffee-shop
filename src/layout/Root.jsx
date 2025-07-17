@@ -1,15 +1,17 @@
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import { Outlet } from "react-router-dom";
+import ScrollToTop from "../components/scrollToTop/ScrollToTop";
 
-const Root = () => {
+const Root = ({ productsQuantityInCart }) => {
     return (
-        <>
-            <Header />
+        <>        
+            <Header productsQuantityInCart={productsQuantityInCart} />
             <main>
                 <Outlet />
             </main>           
             <Footer />
+            <ScrollToTop/>
         </>
     );
 };

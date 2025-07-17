@@ -1,56 +1,62 @@
     [
     {
         "id": 1,  
-        "brand": "DASS COFFEE",
+        "brand": "Dass Coffee",
         "name": "Huehuetenango",
         "weight": 250,
         "type": "robusta",
         "price": 8.99,
+        "popular": true,
         "description": "These beans, cultivated with great difficulty among the volcanoes surrounding the coffee fields of the Huehuetenango region and containing fruit-chocolate flavors, have a unique flavor with their balanced acidity and high body!"    
     },
      {
         "id": 2,  
-        "brand": "DASS COFFEE",
+        "brand": "Dass Coffee",
         "name": "Sidamo",
         "type": "arabica",
         "weight": 250,
         "price": 8.99,
+        "popular": true,
         "description": "The beans, grown on vast coffee fields under the scorching sun, will introduce you to this unique atmosphere from your first sip! Experience the taste of coffee in your soul with Sidamo beans, from the capital of coffee, with their chocolate-woody flavors!"          
     }, 
     {
         "id": 3,  
-        "brand": "DASS COFFEE",
+        "brand": "Dass Coffee",
         "name": "Dali",
         "type": "arabica",
         "weight": 250,
         "price": 8.99,
+        "popular": true,
         "description": "With its rich blend of coffee beans, a blend that blends well with milk, and a dark roast, Dali Blend will be your first choice for espresso-based coffees! The dominant cocoa and tobacco aromas of the Afro-Pacific region deliver the flavor you're looking for for a unique coffee experience!"        
     },   
     {
         "id": 4,
-        "brand": "DASS COFFEE",
+        "brand": "Dass Coffee",
         "name": "Beo Lempira",
         "type": "arabica",
         "weight": 250,
         "price": 8.99,
+        "popular": true,
         "description": "Honduran beans, originating from the fertile lands of South America, have low acidity and a dense body due to the harsh climate they inhabit. With their tropical flavors, featuring fruity and woody aromas, they are poised to be your top choice for a long time to come!"           
     },
     {
         "id": 5,  
-        "brand": "DASS COFFEE",
+        "brand": "Dass Coffee",
         "name": "Yellow Bourbon",
         "type": "robusta",
         "weight": 250,
         "price": 8.99,
+        "popular": true,
         "description": "Prepared with premium beans from Brazil, the world's largest coffee producer, Yellow Bourbon offers an exceptional coffee experience with its hazelnut and walnut-infused aroma. Its balanced flavor and profile, perfect for Turkish palates, make it a favorite among coffee lovers!"    
     },
     {
         "id": 6,
-        "brand": "DASS COFFEE",
+        "brand": "Dass Coffee",
         "name": "Medellin",
         "type": "excelsa",
         "weight": 250,
         "price": 8.99,
+        "popular": true,
         "description": "Specially cultivated in Medellin, Colombia, famous for its Arabica coffee beans, the qualified Supremo beans appeal to true filter coffee enthusiasts with their sugary-fruity aroma and balanced tasting characteristics!"           
     }, 
     {
@@ -60,6 +66,7 @@
         "type": "arabica",
         "weight": 250,
         "price": 12.99,
+        "popular": true,
         "description": "The Plutonio roast is a full-bodied coffee with low acidity and bitterness. Ideal for French press, Italian Moka pot, and espresso."          
     },
     {
@@ -69,6 +76,7 @@
         "type": "robusta",
         "weight": 250,
         "price": 12.99,
+        "popular": true,
         "description": "Roast 27 is balanced in acidity, sweetness and bitterness, a medium roast coffee recommended for all methods, ideal for espresso and filter, balanced."           
     },
     {
@@ -78,6 +86,7 @@
         "type": "arabica",
         "weight": 250,
         "price": 12.99,
+        "popular": true,
         "description": "The Chameleon roast is a coffee suitable for all types of methods, which never repeats the same formula or type of roast, only maintaining quality."     
     },
     {
@@ -87,6 +96,7 @@
         "type": "liberica",
         "weight": 250,
         "price": 12.99,
+        "popular": true,
         "description": "The Valentina roast is a coffee with very low bitterness, intense acidity and sweetness, both in aroma and flavor. Ideal for drip coffee."          
     },
     {
@@ -95,7 +105,8 @@
         "name": "Wild Bloom",
         "type": "liberica",
         "weight": 250,
-        "price": 10.99, 
+        "price": 10.99,
+        "popular": false, 
         "description": "Eco-conscious, outdoorsy coffee lovers."          
     },
     {
@@ -105,6 +116,7 @@
         "type": "robusta",
         "weight": 250,
         "price": 12.99,
+        "popular": false,
         "description": "Fuel Your Hustle."          
     },
     {
@@ -114,6 +126,7 @@
         "type": "excelsa",
         "weight": 250,
         "price": 14.99,
+        "popular": false,
         "description": "Roasted Under the Stars"        
     },
     {
@@ -123,6 +136,7 @@
         "type": "liberica",
         "weight": 250,
         "price": 12.99,
+        "popular": false,
         "description": "Brew. Think. Repeat."          
     },
     {
@@ -132,6 +146,7 @@
         "type": "liberica",
         "weight": 250,
         "price": 14.99,
+        "popular": false,
         "description": "Strong. Smooth. Unapologetic."         
     },
     {
@@ -141,6 +156,7 @@
         "type": "excelsa",
         "weight": 250,
         "price": 10.99,
+        "popular": false,
         "description": "Balance in Every Brew."          
     },
     {
@@ -150,6 +166,7 @@
         "type": "liberica",
         "weight": 250,
         "price": 14.99,
+        "popular": false,
         "description": "Brew Beyond Limits."          
     },
     {
@@ -159,15 +176,17 @@
         "type": "excelsa",
         "weight": 250,
         "price": 12.99,
+        "popular": false,
         "description": "Your Daily Fix."         
     },   
     {
         "id": 19,  
-        "brand": "COLOMBIAN BREW",
+        "brand": "Colombian Brew",
         "name": "Colombian Brew",
         "type": "robusta",
         "weight": 250,
         "price": 14.99,
+        "popular": true,
         "description": "Colombian Brew coffee made with handpicked 100% Arabica Beans. Dark Roast & Fine Grind. Colombian Brew is inspired by Francisco Romero, a priest in mid-16th century Colombia that started its coffee revolution. Colombian Brew Coffee is sourced from best Arabica Bean Plantations in the world."    
     },
     {
@@ -177,6 +196,7 @@
         "type": "liberica",
         "weight": 250,
         "price": 10.99,
+        "popular": false,
         "description": "Kintamani Coffee is a distinctive coffee variety grown in the Kintamani region of Bali, Indonesia. This area is renowned for its unique coffee characteristics and traditional cultivation methods."    
     }   
 ]

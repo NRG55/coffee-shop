@@ -18,8 +18,7 @@
     
     label,
     button {
-        height: 1.8rem;
-        text-transform: uppercase;
+        height: 1.8rem;       
         font-size: .9rem;
         font-weight: 350;   
     }

@@ -16,4 +16,10 @@ export const getProductById = (productId) => {
     return filteredArray[0];
 };
 
+export const getPopularProducts = () => {    
+    const filteredArray = data.filter((product) => product.popular === true);
+    
+    return filteredArray;
+};
+
 export default getProducts;

@@ -6,12 +6,16 @@ import { getProductById } from '../../utils/filter';
 import getImage from "../../utils/getImage";
 
 
-const ProductPage = () => {
+const ProductPage = ({ addProductToCart }) => {
     const [productQuantity, setProductQuantity] = useState(1); 
     
     const { productId } = useParams();
     const product = getProductById(productId);
-    const imageUrl = getImage(product.id);    
+    const imageUrl = getImage(product.id);
+    
+    const handleClick = () => {
+        addProductToCart(productId, productQuantity);    
+    };
 
     return (
         <section className={styles.section}> 
@@ -31,7 +35,13 @@ const ProductPage = () => {
                             productQuantity={productQuantity}
                             setProductQuantity={setProductQuantity} 
                         />
-                        <button className={styles.button}>Add to Cart</button>
+                        <button 
+                            type='button'
+                            className={styles.button}
+                            onClick={handleClick}
+                        >
+                            Add to Cart
+                        </button>
                     </div>
                 </div> 
             </div>      

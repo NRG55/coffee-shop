@@ -5,10 +5,12 @@ import './slider.css';
 import styles from './PopularProducts.module.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Navigation, Pagination, Autoplay } from 'swiper/modules';
-import data from '../../data/products.json';
+import { getPopularProducts } from '../../utils/filter';
 import getImage from '../../utils/getImage';
 
 const PopularProducts = () => {
+    const popularProducts = getPopularProducts();
+
     return ( 
         <section className={styles.section}> 
             <h3>Popular Now</h3>      
@@ -29,7 +31,7 @@ const PopularProducts = () => {
                             disableOnInteraction: false,
                             }}          
             >         
-                {data.map((product) => {
+                {popularProducts.map((product) => {
                     return (
                         <SwiperSlide key={product.id} >
                             <div className={styles.imageWrapper}>                        
