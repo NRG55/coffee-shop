@@ -18,7 +18,7 @@ function App() {
             }));
         };
 
-        toast.success("Successfully added to cart")
+        toast.success("Added to cart")
     };
 
     const productsQuantityInCart = () => Object.values(cartProducts).reduce((a, b) => a + b, 0);

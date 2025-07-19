@@ -6,6 +6,7 @@ import Shop from "./pages/shop/Shop";
 import About from "./pages/About";
 import CardsSection from "./components/cardsSection/CardsSection";
 import ProductPage from "./pages/productPage/ProductPage";
+import ShoppingCart from "./pages/shoppingCart/ShoppingCart";
 
 const Router = ({ productsQuantityInCart, addProductToCart }) => {   
     const router = createBrowserRouter([
@@ -35,6 +36,10 @@ const Router = ({ productsQuantityInCart, addProductToCart }) => {
                         { 
                             path: 'product/:brand/:productId', 
                             element: <ProductPage addProductToCart={addProductToCart} /> 
+                        },
+                        { 
+                            path: 'shopping-cart', 
+                            element: <ShoppingCart /> 
                         }
             ]
         }
