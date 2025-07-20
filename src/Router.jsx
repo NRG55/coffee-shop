@@ -8,7 +8,7 @@ import CardsSection from "./components/cardsSection/CardsSection";
 import ProductPage from "./pages/productPage/ProductPage";
 import ShoppingCart from "./pages/shoppingCart/ShoppingCart";
 
-const Router = ({ productsQuantityInCart, addProductToCart }) => {   
+const Router = ({ productsQuantityInCart, addProductToCart, cartProducts, setCartProducts }) => {   
     const router = createBrowserRouter([
         {
             path:'/',
@@ -39,7 +39,7 @@ const Router = ({ productsQuantityInCart, addProductToCart }) => {
                         },
                         { 
                             path: 'shopping-cart', 
-                            element: <ShoppingCart /> 
+                            element: <ShoppingCart cartProducts={cartProducts} setCartProducts={setCartProducts}/> 
                         }
             ]
         }

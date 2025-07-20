@@ -2,13 +2,23 @@ import styles from './QuantityInput.module.css';
 import PropTypes from "prop-types";
 import { Plus, Minus } from "lucide-react"; 
 
-const QuantityInput = ({ productQuantity, setProductQuantity}) => { 
+const QuantityInput = ({                   
+                    productQuantity, 
+                    setProductQuantity,                   
+                    isShoppingCart=false 
+                    }) => { 
+                     
     const handleChange = (event) => {
         const inputValue = event.target.value;
 
         if (inputValue === "") {
             return setProductQuantity("");
         }
+
+        // if (isShoppingCart) {
+        //     
+        //     return
+        // }
 
         setProductQuantity(inputValue);
     };

@@ -1,10 +1,15 @@
 import styles from './ShoppingCart.module.css';
-import CartItem from "../../components/cartItem/CartItem";
+import CartList from '../../components/cartList/CartList';
 
-const ShoppingCart = () => {
+const ShoppingCart = ({ 
+    cartProducts,
+    setCartProducts,   
+    removeCartProduct
+}) => {
+
     return (
         <section>
-            <CartItem />
+            <CartList cartProducts={cartProducts} setCartProducts={setCartProducts} />
         </section>
     );   
 };

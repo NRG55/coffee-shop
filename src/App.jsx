@@ -4,7 +4,7 @@ import toast, {Toaster} from 'react-hot-toast';
 
 function App() {
     const [cartProducts, setCartProducts] = useState({}); // {productId1 : quantity, productId2: quantity, ...}
-
+    
     const addProductToCart = (productId, quantity) => {
         if (cartProducts.hasOwnProperty(productId)) {
             setCartProducts((previousCartProducts) => ({
@@ -28,6 +28,8 @@ function App() {
             <Router 
                 addProductToCart={addProductToCart}
                 productsQuantityInCart={productsQuantityInCart()}
+                cartProducts={cartProducts}
+                setCartProducts={setCartProducts}              
             />
             <Toaster position="top-right" />
         </>
