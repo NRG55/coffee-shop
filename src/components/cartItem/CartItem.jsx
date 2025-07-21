@@ -4,19 +4,19 @@ import getImage from '../../utils/getImage';
 import QuantityInput from '../quantityInput/QuantityInput';
 import { getProductById } from '../../utils/filter';
 
-const CartItem = ({ id, productsQuantities, setProductsQuantities, addProductToCart }) => {
+const CartItem = ({ productId, productsQuantities, setProductsQuantities, addProductToCart }) => {
     const isShoppingCart = true; 
-    const productImage = getImage(id);
-    const productObject = getProductById(id);   
+    const productImage = getImage(productId);
+    const productObject = getProductById(productId);   
 
     const setProductQuantity = (newQuantity) => {
         setProductsQuantities((previousProductsQuantities) => ({
           ...previousProductsQuantities,
-                            [id]: newQuantity,
+                            [productId]: newQuantity,
         }));
 
-        addProductToCart(id, newQuantity, isShoppingCart)
-      };
+        addProductToCart(productId, newQuantity, isShoppingCart)
+    };   
 
     return (
         <article className={styles.cartItem}>
@@ -33,11 +33,11 @@ const CartItem = ({ id, productsQuantities, setProductsQuantities, addProductToC
                 <div>
                 <p className={styles.productPrice}>price: €{productObject.price}</p>
                 <QuantityInput                        
-                        productQuantity={productsQuantities[id]}
+                        productQuantity={productsQuantities[productId]}
                         setProductQuantity={setProductQuantity}                                            
                 />
                 </div>
-                <p className={styles.subtotal}>€{productObject.price}</p>
+                <p className={styles.subtotal}>€{Math.round(productObject.price * productsQuantities[productId] * 100) / 100}</p>
             </div>            
         </article>
     );

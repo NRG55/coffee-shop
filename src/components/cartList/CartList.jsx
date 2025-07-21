@@ -11,7 +11,7 @@ const CartList = ({ cartProducts, addProductToCart, removeProductFromCart }) => 
            // cartProduct[0] -> product id, cartProduct[1] -> product quantity 
                 <CartItem 
                     key={"cartItem" + cartProduct[0]} 
-                    id={cartProduct[0]} 
+                    productId={cartProduct[0]} 
                     productsQuantities={productsQuantities}                    
                     setProductsQuantities={setProductsQuantities}                   
                     addProductToCart={addProductToCart}                   

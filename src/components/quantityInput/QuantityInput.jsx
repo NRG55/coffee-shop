@@ -20,7 +20,7 @@ const QuantityInput = ({
             <button
                 type="button"
                 className={styles.button}               
-                onClick={() => productQuantity >= 1 && setProductQuantity(productQuantity - 1)}
+                onClick={() => productQuantity >= 2 && setProductQuantity(productQuantity - 1)}
             >
                 <Minus size={16} />
             </button>

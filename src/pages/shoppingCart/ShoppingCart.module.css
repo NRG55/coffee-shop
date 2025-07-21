@@ -1,0 +1,44 @@
+.section { 
+    display: grid; 
+    justify-content: center;   
+    height: 100vh;  
+}
+
+.container {
+    width: 40rem;
+}
+
+.heading {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.subtotal {
+    display: flex;
+    justify-self: end;
+    margin-bottom: 2rem;    
+}
+
+.subtotalText {
+    font-size: .8rem;
+    margin-right: .5rem;
+    color: rgb(95, 93, 93);   
+}
+
+.subtotalPrice {
+    font-size: 1.4rem;
+    font-weight: 600;  
+}
+
+.checkoutButton { 
+    display: grid;    
+    justify-self: end;
+    cursor: pointer;
+    padding: .5rem 2rem;
+    background-color: rgb(201, 144, 92);
+    color: white;
+    border: solid 1px rgb(182, 135, 49);
+
+}
