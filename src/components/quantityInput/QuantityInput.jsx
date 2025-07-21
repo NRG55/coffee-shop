@@ -4,34 +4,16 @@ import { Plus, Minus } from "lucide-react";
 
 const QuantityInput = ({                   
                     productQuantity, 
-                    setProductQuantity,                   
-                    isShoppingCart=false 
+                    setProductQuantity                  
                     }) => { 
-                     
+                
     const handleChange = (event) => {
-        const inputValue = event.target.value;
+        const inputValue = Number(event.target.value);      
 
-        if (inputValue === "") {
-            return setProductQuantity("");
-        }
-
-        // if (isShoppingCart) {
-        //     
-        //     return
-        // }
-
-        setProductQuantity(inputValue);
-    };
-
-    const handleKeyDown = (event) => {
-        if (event.key === "Backspace" || event.key === "Delete") {
-            return
-        };
-
-        if (!/[0-9]/.test(event.key)) {
-            event.preventDefault()
-        };
-    };   
+        if (inputValue >= 1) {
+            setProductQuantity(inputValue);
+        };        
+    };      
 
     return (
         <article className={styles.container}>
@@ -45,11 +27,9 @@ const QuantityInput = ({
             <input
                 type="number"
                 value={productQuantity}                             
-                className={styles.numberInput}
-                onFocus={(event) => event.currentTarget.select()}
-                onBlur={(event) => !event.target.value && setProductQuantity(1)}
-                onKeyDown={handleKeyDown}
+                className={styles.numberInput}               
                 onChange={handleChange}
+                min="1"
             />
             <button
                 type="button"

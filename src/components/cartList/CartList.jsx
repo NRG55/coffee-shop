@@ -2,7 +2,7 @@ import styles from './CartList.module.css';
 import CartItem from '../cartItem/CartItem';
 import { useState } from 'react';
 
-const CartList = ({ cartProducts, setCartProducts, removeCartProduct }) => {
+const CartList = ({ cartProducts, addProductToCart, removeProductFromCart }) => {
     const [productsQuantities, setProductsQuantities] = useState(cartProducts);
 
     return (
@@ -13,9 +13,8 @@ const CartList = ({ cartProducts, setCartProducts, removeCartProduct }) => {
                     key={"cartItem" + cartProduct[0]} 
                     id={cartProduct[0]} 
                     productsQuantities={productsQuantities}                    
-                    setProductsQuantities={setProductsQuantities}
-                    cartProducts={cartProducts}
-                    setCartProducts={setCartProducts}                    
+                    setProductsQuantities={setProductsQuantities}                   
+                    addProductToCart={addProductToCart}                   
                 />)}
         </>
     );

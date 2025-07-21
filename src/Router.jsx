@@ -39,7 +39,11 @@ const Router = ({ productsQuantityInCart, addProductToCart, cartProducts, setCar
                         },
                         { 
                             path: 'shopping-cart', 
-                            element: <ShoppingCart cartProducts={cartProducts} setCartProducts={setCartProducts}/> 
+                            element: <ShoppingCart 
+                                            cartProducts={cartProducts} 
+                                            setCartProducts={setCartProducts} 
+                                            addProductToCart={addProductToCart}
+                                    /> 
                         }
             ]
         }

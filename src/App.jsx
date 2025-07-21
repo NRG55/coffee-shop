@@ -4,21 +4,23 @@ import toast, {Toaster} from 'react-hot-toast';
 
 function App() {
     const [cartProducts, setCartProducts] = useState({}); // {productId1 : quantity, productId2: quantity, ...}
-    
-    const addProductToCart = (productId, quantity) => {
-        if (cartProducts.hasOwnProperty(productId)) {
+
+    const addProductToCart = (productId, quantity, isShoppingCart=false) => {
+        if (cartProducts.hasOwnProperty(productId) && !isShoppingCart) {
             setCartProducts((previousCartProducts) => ({
                 ...previousCartProducts,
                 [productId]: previousCartProducts[productId] + quantity
             }));
+
+            toast.success("Added to cart");
         } else {
             setCartProducts((previousCartProducts) => ({
                 ...previousCartProducts,
                 [productId]: quantity
             }));
-        };
 
-        toast.success("Added to cart")
+            toast.success("Cart is updated");
+        };        
     };
 
     const productsQuantityInCart = () => Object.values(cartProducts).reduce((a, b) => a + b, 0);
@@ -29,7 +31,7 @@ function App() {
                 addProductToCart={addProductToCart}
                 productsQuantityInCart={productsQuantityInCart()}
                 cartProducts={cartProducts}
-                setCartProducts={setCartProducts}              
+                setCartProducts={setCartProducts}                           
             />
             <Toaster position="top-right" />
         </>

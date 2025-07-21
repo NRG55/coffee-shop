@@ -4,7 +4,7 @@ import getImage from '../../utils/getImage';
 import QuantityInput from '../quantityInput/QuantityInput';
 import { getProductById } from '../../utils/filter';
 
-const CartItem = ({ id, cartProducts, setCartProducts, productsQuantities, setProductsQuantities }) => {
+const CartItem = ({ id, productsQuantities, setProductsQuantities, addProductToCart }) => {
     const isShoppingCart = true; 
     const productImage = getImage(id);
     const productObject = getProductById(id);   
@@ -14,6 +14,8 @@ const CartItem = ({ id, cartProducts, setCartProducts, productsQuantities, setPr
           ...previousProductsQuantities,
                             [id]: newQuantity,
         }));
+
+        addProductToCart(id, newQuantity, isShoppingCart)
       };
 
     return (
@@ -32,10 +34,7 @@ const CartItem = ({ id, cartProducts, setCartProducts, productsQuantities, setPr
                 <p className={styles.productPrice}>price: €{productObject.price}</p>
                 <QuantityInput                        
                         productQuantity={productsQuantities[id]}
-                        setProductQuantity={setProductQuantity} 
-                        cartProducts={cartProducts}
-                        setCartProducts={setCartProducts}                        
-                        isShoppingCart={isShoppingCart}
+                        setProductQuantity={setProductQuantity}                                            
                 />
                 </div>
                 <p className={styles.subtotal}>€{productObject.price}</p>
