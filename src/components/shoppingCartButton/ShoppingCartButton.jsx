@@ -10,11 +10,10 @@ const ShoppingCartButton = ({ productsQuantityInCart }) => {
                     color={`${useLocation().pathname === "/" ? "white": "black"}`}
                     strokeWidth="1.5"
                 />
-                <span
-                    className={styles.counter}               
-                >
-                <small>{productsQuantityInCart}</small>
-                </span>
+                 {productsQuantityInCart !== 0 ? 
+                 <span className={styles.counter}>
+                    <small>{productsQuantityInCart}</small>                   
+                </span> :  null}                
             </button>
         </Link>
     );

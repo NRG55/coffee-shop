@@ -7,14 +7,15 @@ const CartList = ({ cartProducts, addProductToCart, removeProductFromCart }) => 
 
     return (
         <>
-           {Object.entries(productsQuantities).map((cartProduct) => 
+           {Object.entries(cartProducts).map((cartProduct) => 
            // cartProduct[0] -> product id, cartProduct[1] -> product quantity 
                 <CartItem 
                     key={"cartItem" + cartProduct[0]} 
                     productId={cartProduct[0]} 
                     productsQuantities={productsQuantities}                    
                     setProductsQuantities={setProductsQuantities}                   
-                    addProductToCart={addProductToCart}                   
+                    addProductToCart={addProductToCart}
+                    removeProductFromCart={removeProductFromCart}                   
                 />)}
         </>
     );

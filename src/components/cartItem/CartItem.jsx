@@ -4,7 +4,7 @@ import getImage from '../../utils/getImage';
 import QuantityInput from '../quantityInput/QuantityInput';
 import { getProductById } from '../../utils/filter';
 
-const CartItem = ({ productId, productsQuantities, setProductsQuantities, addProductToCart }) => {
+const CartItem = ({ productId, productsQuantities, setProductsQuantities, addProductToCart, removeProductFromCart }) => {
     const isShoppingCart = true; 
     const productImage = getImage(productId);
     const productObject = getProductById(productId);   
@@ -29,7 +29,7 @@ const CartItem = ({ productId, productsQuantities, setProductsQuantities, addPro
                 <Link>
                     <p className={styles.productName}>{productObject.name}</p>                   
                 </Link>
-                <button>Delete</button>
+                <button onClick={() => removeProductFromCart(productId)}>Delete</button>
                 <div>
                 <p className={styles.productPrice}>price: €{productObject.price}</p>
                 <QuantityInput                        

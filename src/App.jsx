@@ -23,12 +23,23 @@ function App() {
         };        
     };
 
+    const removeProductFromCart = (productId) => {
+        setCartProducts((previousCartProducts) => {
+            const newCartProducts = { ...previousCartProducts };
+
+            delete newCartProducts[productId];
+
+            return newCartProducts;
+        });
+    };
+
     const productsQuantityInCart = () => Object.values(cartProducts).reduce((a, b) => a + b, 0);
 
     return (
         <>
             <Router 
                 addProductToCart={addProductToCart}
+                removeProductFromCart={removeProductFromCart}
                 productsQuantityInCart={productsQuantityInCart()}
                 cartProducts={cartProducts}
                 setCartProducts={setCartProducts}                           

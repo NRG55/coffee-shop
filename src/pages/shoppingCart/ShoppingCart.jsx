@@ -1,6 +1,7 @@
 import styles from './ShoppingCart.module.css';
 import CartList from '../../components/cartList/CartList';
 import { getProductById } from '../../utils/filter';
+import { Link } from 'react-router-dom';
 
 const ShoppingCart = ({ cartProducts, addProductToCart, removeProductFromCart }) => {
     const getCartTotal = () => {
@@ -29,7 +30,12 @@ const ShoppingCart = ({ cartProducts, addProductToCart, removeProductFromCart })
                     <p className={styles.subtotalText}>Subtotal:</p>
                     <p className={styles.subtotalPrice}>€{getCartTotal()}</p>
                 </div>
-                <button className={styles.checkoutButton}>Check out</button>
+                <div className={styles.buttonsContainer}>
+                    <Link to="/shop/all">
+                        <button className={styles.backToShopButton}>Back to Shop</button>
+                    </Link>
+                    <button className={styles.checkoutButton}>Check out</button>
+                </div>
             </div>
         </section>
     );   
