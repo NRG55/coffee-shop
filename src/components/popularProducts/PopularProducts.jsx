@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { getPopularProducts } from '../../utils/filter';
 import getImage from '../../utils/getImage';
+import { Link } from 'react-router-dom';
 
 const PopularProducts = () => {
     const popularProducts = getPopularProducts();
@@ -32,17 +33,19 @@ const PopularProducts = () => {
                             }}          
             >         
                 {popularProducts.map((product) => {
-                    return (
-                        <SwiperSlide key={product.id} >
-                            <div className={styles.imageWrapper}>                        
-                                <img src={getImage(product.id)}/> 
-                            </div>
-                            <div className={styles.productInfo}>                               
-                                <div className={styles.productName}>{product.name}</div>
-                                <div className={styles.productBrand}>{product.brand}</div>
-                                <div className={styles.productPrice}>€{product.price}</div>
-                            </div>                                          
-                        </SwiperSlide>
+                    return (                        
+                            <SwiperSlide key={product.id} >
+                                <Link className={styles.slideContainer} to={`/product/${product.brand}/${product.id}`}>
+                                    <div className={styles.imageWrapper}>                        
+                                        <img src={getImage(product.id)}/> 
+                                    </div>
+                                    <div className={styles.productInfo}>                               
+                                        <div className={styles.productName}>{product.name}</div>
+                                        <div className={styles.productBrand}>{product.brand}</div>
+                                        <div className={styles.productPrice}>€{product.price}</div>
+                                    </div>
+                                </Link>                                          
+                            </SwiperSlide>                      
                     )
                 })
                 }

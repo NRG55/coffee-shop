@@ -20,13 +20,13 @@ const CartItem = ({ productId, productsQuantities, setProductsQuantities, addPro
 
     return (
         <article className={styles.cartItem}>
-            <Link>
+            <Link to={`/product/${productObject.brand}/${productId}`}>
                 <div className={styles.imageWrapper}>
                     <img src={productImage}/>
                 </div>
             </Link>
             <div className={styles.rightContainer}>
-                <Link>
+                <Link to={`/product/${productObject.brand}/${productId}`}>
                     <p className={styles.productName}>{productObject.name}</p>                   
                 </Link>
                 <button onClick={() => removeProductFromCart(productId)}>Delete</button>

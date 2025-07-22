@@ -4,6 +4,8 @@ import { getProductById } from '../../utils/filter';
 import { Link } from 'react-router-dom';
 
 const ShoppingCart = ({ cartProducts, addProductToCart, removeProductFromCart }) => {
+    const isEmpty = Object.keys(cartProducts).length === 0;
+
     const getCartTotal = () => {
         let total = 0;
 
@@ -15,6 +17,19 @@ const ShoppingCart = ({ cartProducts, addProductToCart, removeProductFromCart })
         };
 
         return total.toFixed(2);
+    };
+
+    if (isEmpty) {
+        return (           
+            <section className={styles.section}>
+                <div className={styles.container}>
+                    <h1 className={styles.heading}>Your shopping cart is currently empty.</h1>
+                    <Link to="/shop/all">
+                        <button className={styles.continueShoppingButton}>Continue shopping</button>
+                    </Link>
+                </div>
+            </section>          
+        )
     };
 
     return (

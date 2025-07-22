@@ -1,7 +1,7 @@
 import styles from './ProductPage.module.css';
 import { useState } from 'react';
 import QuantityInput from '../../components/quantityInput/QuantityInput';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { getProductById } from '../../utils/filter';
 import getImage from "../../utils/getImage";
 
@@ -42,6 +42,9 @@ const ProductPage = ({ addProductToCart }) => {
                         >
                             Add to Cart
                         </button>
+                        <Link to="/shop/all">
+                            <button className={styles.continueShoppingButton}>Continue shopping</button>
+                        </Link>
                     </div>
                 </div> 
             </div>      

@@ -71,3 +71,14 @@
     color: rgb(182, 135, 49);
     border: solid 1px rgb(182, 135, 49);
 }
+
+.continueShoppingButton {
+    display: grid;
+    cursor: pointer;  
+    background: none;
+    border: none;
+    font-size: .9rem;
+    text-decoration: underline;
+    padding: 1rem 0;
+    color: rgb(94, 93, 93);
+}

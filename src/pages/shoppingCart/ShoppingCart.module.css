@@ -70,3 +70,14 @@
     background-color: black;
     color: white;   
 }
+
+.continueShoppingButton {
+    display: grid;
+    cursor: pointer;
+    justify-self: center;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    text-decoration: underline;
+    color: rgb(94, 93, 93);
+}
