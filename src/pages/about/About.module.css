@@ -1,0 +1,24 @@
+.section { 
+    height: 100vh;
+    padding: 4rem 2rem;    
+}
+
+.container > div {
+   display: grid;
+   grid-template-columns: 1fr 1fr; 
+   margin-bottom: 4rem;   
+}
+
+.container .info {
+    display: grid;
+    grid-template-rows: min-content;
+    padding: 1rem;
+}
+
+.container .info h2 {   
+    margin-bottom: 1rem;
+}
+
+.imageWrapper img {
+    width: 100%;
+}

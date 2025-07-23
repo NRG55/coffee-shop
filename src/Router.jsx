@@ -3,7 +3,7 @@ import Root from "./layout/Root";
 import ErrorPage from "./pages/ErrorPage";
 import Home from "./pages/home/Home";
 import Shop from "./pages/shop/Shop";
-import About from "./pages/About";
+import About from "./pages/about/About";
 import CardsSection from "./components/cardsSection/CardsSection";
 import ProductPage from "./pages/productPage/ProductPage";
 import ShoppingCart from "./pages/shoppingCart/ShoppingCart";

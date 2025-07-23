@@ -6,6 +6,10 @@
     padding: 3rem 5rem;
 }
 
+.footer a {
+    text-decoration: none;
+}
+
 .footer .container {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;

@@ -20,6 +20,7 @@
 
 .cartItem a {
     color: black;
+    text-decoration: none;
 }
 
 .rightContainer {

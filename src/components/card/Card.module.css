@@ -4,6 +4,10 @@
     animation: opacity .3s; 
 }
 
+.card a {
+    text-decoration: none;
+}
+
 .card div:nth-child(2) {
     display: flex;
     justify-content: space-between;

@@ -4,6 +4,10 @@
     padding: 2rem 0;
 }
 
+.section a {
+    text-decoration: none;
+}
+
 .section h3 {
     font-size: 1.5rem;   
     font-weight: 400;

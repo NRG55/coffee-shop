@@ -13,7 +13,7 @@ const Home = () => {
                 </div>
                 <div className={styles.infoContainer}>
                     <h1>Find Your Flavor</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo facilis, reprehenderit labore et ab nulla iusto corporis nihil blanditiis expedita.</p>
+                    <p>If you’re looking for a high-quality coffee, you can’t go wrong with our Coffee Shop. We have a wide selection of coffees to choose from.</p>
                     <Link to="./shop/all">
                         <button className={styles.button}>Shop Now</button>
                     </Link>               
