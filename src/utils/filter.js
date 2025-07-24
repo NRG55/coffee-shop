@@ -1,13 +1,24 @@
 import data from '../data/products.json';
 
-const getProducts = (brand) => {
-    if (brand === "all") {
-        return data;
+export const getCoffeeTypes = (brand, coffeeTypes) => {   
+    if (brand === 'all') {
+        return coffeeTypes;
     };
 
-    const products = data.filter((product) => product.brand.toLowerCase() === brand);    
+    const tempArray = [];
 
-    return products;
+    const products = data.filter((product) => product.brand.replace(/\s+/g, '-').toLowerCase() === brand);
+    const coffeeTypesSet = new Set(products.map((product) => product.type));
+    const coffeeTypesArray = [...coffeeTypesSet];
+    const sortedByNameCoffeTypeArray = coffeeTypesArray.sort(); 
+  
+    sortedByNameCoffeTypeArray.forEach((coffeeType) => {
+        const filteredArray = coffeeTypes.filter((object) => object.type.toLowerCase() === coffeeType);
+
+        tempArray.push(filteredArray[0]);
+    });
+
+    return tempArray;
 };
 
 export const getProductById = (productId) => {    
@@ -22,4 +33,13 @@ export const getPopularProducts = () => {
     return filteredArray;
 };
 
-export default getProducts;
+export const getProducts = (brand) => {
+    if (brand === 'all') {
+        return data;
+    }
+
+    const filteredProducts = data.filter((product) => product.brand.toLowerCase() === brand);
+
+    return filteredProducts;
+};
+
