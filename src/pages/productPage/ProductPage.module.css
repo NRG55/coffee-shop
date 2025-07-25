@@ -49,7 +49,18 @@
 }
 
 .productInfoWrapper .description {    
+    margin-bottom: .5rem;
+}
+
+.productInfoWrapper .type { 
+    font-size: .8rem;
+    font-weight: 300;    
     margin-bottom: 2rem;
+}
+
+.productInfoWrapper .type span {
+    font-size: .9rem;     
+    font-weight: 700;
 }
 
 .addToCartContainer {

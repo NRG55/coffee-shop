@@ -8,7 +8,7 @@ export const getCoffeeTypes = (brand, coffeeTypes) => {
     const tempArray = [];
 
     const products = data.filter((product) => product.brand.replace(/\s+/g, '-').toLowerCase() === brand);
-    const coffeeTypesSet = new Set(products.map((product) => product.type));
+    const coffeeTypesSet = new Set(products.map((product) => product.type.toLowerCase()));
     const coffeeTypesArray = [...coffeeTypesSet];
     const sortedByNameCoffeTypeArray = coffeeTypesArray.sort(); 
   

@@ -29,6 +29,7 @@ const ProductPage = ({ addProductToCart }) => {
                         <p className={styles.weight}>weigth: {product.weight}gr.</p>
                         <p className={styles.price}>€{product.price}</p>
                         <p className={styles.description}>{product.description}</p>
+                        <p className={styles.type}>coffee type: <span>{product.type}</span></p>
                     </div>           
                     <div className={styles.addToCartContainer}>      
                         <QuantityInput
