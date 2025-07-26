@@ -1,7 +1,8 @@
 import styles from './Header.module.css';
-import { Link, useLocation } from 'react-router-dom';
-import logo from '/src/images/logo/logo.png';
+import { useLocation } from 'react-router-dom';
+import Logo from '../logo/Logo';
 import Navbar from "../navbar/Navbar";
+import NavMobile from '../navMobile/NavMobile';
 import ScrollDownArrow from '../scrollDownArrow/ScrollDownArrow';
 import { useState } from 'react';
 import ShoppingCartButton from '../shoppingCartButton/ShoppingCartButton';
@@ -32,13 +33,10 @@ const Header = ({ productsQuantityInCart }) => {
                                 pathname !== "/" ? styles.whiteBackground : ""}                            
                                 `}
                 >               
-                    <div>
-                        <Link to="/">
-                            <img src={logo} alt="Logo"/>
-                        </Link>
-                    </div>
+                    <Logo />
                     <Navbar />
-                    <ShoppingCartButton productsQuantityInCart={productsQuantityInCart} />                   
+                    <ShoppingCartButton productsQuantityInCart={productsQuantityInCart} /> 
+                    <NavMobile />                  
                 </div>                
             </header>
             {isHeaderTransparent &&

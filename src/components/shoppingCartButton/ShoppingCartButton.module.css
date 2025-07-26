@@ -20,3 +20,10 @@
     font-weight: bold;
     border-radius: 50%;   
 }
+
+@media (max-width: 768px) {
+    .button {
+       justify-self: end;
+       margin-right: 2rem;
+    }   
+}

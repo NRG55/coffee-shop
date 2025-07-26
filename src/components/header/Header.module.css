@@ -5,25 +5,18 @@
 .header {  
     position: sticky;
     top: 0;
-    display: flex;
-    justify-content: center;  
-    align-items: center;
     height: 5rem;   
     z-index: 10;  
 }
 
 .container {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;  
     height: 100%;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;   
     max-width: 1400px;
-    padding: 0 1.5rem;    
-
-    img {
-        width: 3rem;
-    }
+    padding: 0 1.5rem;
 }
 
 .whiteTextAndIcon {   
