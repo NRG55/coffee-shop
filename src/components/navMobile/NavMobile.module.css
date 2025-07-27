@@ -1,4 +1,4 @@
-.menuButton {
+.menuButton {   
     cursor: pointer;
     border: none;
     background: none;
@@ -8,11 +8,9 @@
 .nav {
     position: absolute;
     top: 5rem;
-    right: 2rem;
+    right: 0;
     width: 10rem;
-   
-    display: none;
-   
+    animation: opacity .6s; 
 }
 
 .nav ul {
@@ -20,9 +18,13 @@
 }
 
 .nav ul li {
-    display: flex;
-    justify-content: center;
+    display: flex; 
     padding: .5rem;
+}
+
+.nav a {
+    width: 100%;
+    text-align: center;
 }
 
 .nav a:hover {
@@ -31,11 +33,21 @@
 }
 
 .whiteBackground {
-    background-color: rgb(255, 255, 255, 0.6);
+    background-color: rgb(255, 255, 255);
 }
 
 .blackBackground {
-    background-color: rgb(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 @media (max-width: 768px) {

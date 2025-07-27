@@ -35,15 +35,15 @@
     padding-left: 6rem;   
 
     h1 {
-        font-size: 3rem;
-        padding-bottom: 2rem;
+        font-size: 3rem;      
+        margin-bottom: 2rem;
         font-weight: 500;
     }
 
     p {
         font-size: 1.5rem;
         font-weight: 200;
-        padding-bottom: 3rem;
+        margin-bottom: 3rem;
     }  
 }
 
@@ -55,3 +55,18 @@
     padding: 1rem 2rem;
     background-color: rgb(68, 41, 9);
 }
+
+@media (max-width: 991px) {
+   .infoContainer {        
+        max-width: 60%;       
+    }   
+}
+
+@media (max-width: 768px) {
+    .infoContainer {
+        margin-top: 4rem;
+        max-width: 100%;
+        padding: 0 3rem;
+    }   
+}
+

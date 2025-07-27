@@ -4,7 +4,7 @@ import { useLocation, Link } from "react-router-dom";
 
 const ShoppingCartButton = ({ productsQuantityInCart }) => {
     return (
-        <Link to="/shopping-cart">
+        <Link to="/shopping-cart" className={styles.shoppingCartButtonWrapper}>
             <button className={styles.button}>
                 <ShoppingCart 
                     color={`${useLocation().pathname === "/" ? "white": "black"}`}

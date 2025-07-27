@@ -10,13 +10,17 @@
 }
 
 .container {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
+    display: flex;
+    justify-content: space-between;
     align-items: center;  
     height: 100%;
     width: 100%;   
     max-width: 1400px;
     padding: 0 1.5rem;
+}
+
+.shoppingCartAndMobileNavWrapper {
+    display: flex;  
 }
 
 .whiteTextAndIcon {   
@@ -53,4 +57,10 @@
 
 .whiteBackground {
     background-color: white;
+}
+
+@media (max-width: 768px) {
+    .shoppingCartAndMobileNavWrapper {    
+       gap: 2rem;
+    }   
 }

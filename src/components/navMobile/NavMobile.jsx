@@ -1,33 +1,58 @@
 import styles from './NavMobile.module.css';
 import { Link, useLocation } from "react-router-dom";
-import { Menu } from 'lucide-react';
+import { Squash as Menu } from 'hamburger-react';
+import { useClickAway } from 'react-use';
+import { useRef } from 'react';
 
-const NavMobile = () => {  
-    
+const NavMobile = ({ isOpen, setIsOpen }) => { 
+    const location = useLocation();
+    const ref = useRef(null);
+
+    useClickAway(ref, () => setIsOpen(false));
 
     return (
-        <>
+        <div ref={ref}>
             <button className={styles.menuButton}>
                 <Menu 
-                    color={`${useLocation().pathname === "/" ? "white": "black"}`}
-                    strokeWidth="1.2"
-                    size={40}
+                    color={`${location.pathname === "/" ? "white": "black"}`}                   
+                    size={30}
+                    duration={0.2}
+                    toggled={isOpen} 
+                    toggle={setIsOpen}                                  
                 />
             </button>
+            {isOpen &&
             <nav className={styles.nav} >
-                <ul className={`${useLocation().pathname === "/" ? styles.blackBackground : styles.whiteBackground}`}>
+                <ul className={`${location.pathname === "/" ? styles.blackBackground : styles.whiteBackground}`}>
                     <li>
-                        <Link to="/">HOME</Link>
+                        <Link 
+                            to="/" 
+                            onClick={() => setIsOpen((prev) => !prev)}
+                            onBlur={() => setIsOpen(false)}
+                        >
+                            HOME
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/shop/all">SHOP</Link>
+                        <Link 
+                            to="/shop/all"
+                            onClick={() => setIsOpen((prev) => !prev)}
+                        >
+                            SHOP
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/about">ABOUT</Link>
+                        <Link 
+                            to="/about"
+                            onClick={() => setIsOpen((prev) => !prev)}
+                        >
+                            ABOUT
+                        </Link>
                     </li>
                 </ul>
             </nav>
-        </>
+            }
+        </div>
     );
 };
 

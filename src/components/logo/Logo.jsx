@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Logo = () => {
     return (
-        <div className={styles.container}>
+        <div className={styles.logoWrapper}>
             <Link to="/">
                 <img src={logo} alt="Logo"/>
             </Link>

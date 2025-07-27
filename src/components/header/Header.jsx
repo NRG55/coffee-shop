@@ -9,7 +9,7 @@ import ShoppingCartButton from '../shoppingCartButton/ShoppingCartButton';
 
 const Header = ({ productsQuantityInCart }) => {
     const [isHeaderTransparent, setHeaderTransparent] = useState(true);
-
+    const [isOpen, setIsOpen] = useState(false);
     const { pathname } = useLocation();
   
     const setHeaderNonTransparent = () => {
@@ -35,8 +35,10 @@ const Header = ({ productsQuantityInCart }) => {
                 >               
                     <Logo />
                     <Navbar />
-                    <ShoppingCartButton productsQuantityInCart={productsQuantityInCart} /> 
-                    <NavMobile />                  
+                    <div className={styles.shoppingCartAndMobileNavWrapper}>
+                        <ShoppingCartButton productsQuantityInCart={productsQuantityInCart} /> 
+                        <NavMobile isOpen={isOpen} setIsOpen={setIsOpen}/>
+                    </div>                  
                 </div>                
             </header>
             {isHeaderTransparent &&
