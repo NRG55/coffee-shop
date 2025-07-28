@@ -1,7 +1,8 @@
 .section { 
-    display: grid; 
+    display: flex; 
     justify-content: center;   
-    height: 100vh;  
+    height: 100vh;
+    width: 100%;  
 }
 
 .container {
@@ -80,4 +81,15 @@
     font-size: 1rem;
     text-decoration: underline;
     color: rgb(94, 93, 93);
+}
+
+@media (max-width: 991px) {
+   
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 3rem;
+    }    
 }

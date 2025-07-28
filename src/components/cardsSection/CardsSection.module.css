@@ -24,7 +24,14 @@
     }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+    .cardsContainer {    
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);            
+    }
+}
+
+@media (max-width: 600px) {
     .cardsContainer {    
         display: grid;
         grid-template-columns: repeat(2, 1fr);            

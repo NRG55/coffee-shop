@@ -10,6 +10,7 @@ const About = () => {
                     <div className={styles.info}>
                         <h2>About Us</h2>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia autem tenetur molestias tempore corrupti? Non est culpa molestias architecto sed hic qui, in, ab nostrum sunt tenetur tempora libero temporibus molestiae facilis exercitationem expedita, perspiciatis eligendi ratione iste! Deleniti, ipsum.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio cum necessitatibus delectus ullam et a!</p>
                     </div> 
                     <div className={styles.imageWrapper}>
                         <img src={coffeeCupImage} alt="Coffee cup"/>

@@ -30,8 +30,9 @@
 }
 
 .infoContainer {      
-    color: white;
-    max-width: 40%;
+    color: white;   
+    max-width: 1200px;
+    margin: auto;
     padding-left: 6rem;   
 
     h1 {
@@ -41,6 +42,7 @@
     }
 
     p {
+        max-width: 60%;
         font-size: 1.5rem;
         font-weight: 200;
         margin-bottom: 3rem;
@@ -58,14 +60,19 @@
 
 @media (max-width: 991px) {
    .infoContainer {        
-        max-width: 60%;       
-    }   
+        max-width: 80%;
+        margin: 0;       
+    } 
+    
+    .infoContainer p {        
+        max-width: 80%;             
+    }
 }
 
 @media (max-width: 768px) {
     .infoContainer {
         margin-top: 4rem;
-        max-width: 80%;
+        max-width: 100%;
         padding: 0 3rem;
     }   
 }

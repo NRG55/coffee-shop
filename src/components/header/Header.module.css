@@ -15,8 +15,9 @@
     align-items: center;  
     height: 100%;
     width: 100%;   
-    max-width: 1400px;
+    max-width: 1200px;
     padding: 0 1.5rem;
+    margin: auto;
 }
 
 .navMobileAndLogoWrapper,

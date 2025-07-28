@@ -1,6 +1,7 @@
 .swiper {   
     padding-top: 2rem;
-    padding-bottom: 4rem;   
+    padding-bottom: 4rem;
+    max-width: 1200px;   
 }
 
 .swiper-wrapper {
