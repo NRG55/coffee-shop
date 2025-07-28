@@ -2,21 +2,22 @@ import styles from './NavMobile.module.css';
 import { Link, useLocation } from "react-router-dom";
 import { Squash as Menu } from 'hamburger-react';
 import { useClickAway } from 'react-use';
-import { useRef } from 'react';
+import { useState, useRef } from 'react';
 
-const NavMobile = ({ isOpen, setIsOpen }) => { 
+const NavMobile = () => { 
+    const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
     const ref = useRef(null);
 
     useClickAway(ref, () => setIsOpen(false));
 
     return (
-        <div ref={ref}>
+        <div ref={ref} className={styles.navMobileContainer}>
             <button className={styles.menuButton}>
                 <Menu 
                     color={`${location.pathname === "/" ? "white": "black"}`}                   
-                    size={30}
-                    duration={0.2}
+                    size={24}
+                    duration={0.1}
                     toggled={isOpen} 
                     toggle={setIsOpen}                                  
                 />

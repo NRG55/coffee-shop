@@ -2,10 +2,30 @@ import styles from './Filter.module.css';
 import brands from '../../data/brands';
 import coffeeTypes from '../../data/coffeeTypes';
 import { Link } from "react-router-dom";
-import { useParams } from 'react-router-dom';
+import { useParams, useSearchParams } from 'react-router-dom';
 import { getCoffeeTypes } from '../../utils/filter';
 
-const Filter = ({ coffeeTypesParams, handleCoffeeTypeFilter}) => {      
+const Filter = () => { 
+    const [searchParams, setSearchParams] = useSearchParams();
+    const coffeeTypesParams = searchParams.getAll("type") || [];
+
+    const handleCoffeeTypeFilter = (event, coffeeType) => {      
+        const currentCoffeeType = coffeeTypesParams.includes(coffeeType);
+
+        if (currentCoffeeType && !event.target.checked) {
+            const filteredCoffeeTypes = coffeeTypesParams.filter((type) => type !== coffeeType);
+
+            return setSearchParams((prev) => ({
+                ...prev,
+                   type: filteredCoffeeTypes
+            }));
+        };
+
+        setSearchParams((prev) => ({
+            ...prev,
+               type: [...coffeeTypesParams, coffeeType]
+        }));
+    };     
     const { brand } = useParams();  
     const coffeeTypesByBrand = getCoffeeTypes(brand, coffeeTypes);
 

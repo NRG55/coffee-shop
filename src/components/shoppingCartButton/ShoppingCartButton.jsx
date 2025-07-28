@@ -8,7 +8,8 @@ const ShoppingCartButton = ({ productsQuantityInCart }) => {
             <button className={styles.button}>
                 <ShoppingCart 
                     color={`${useLocation().pathname === "/" ? "white": "black"}`}
-                    strokeWidth="1.5"
+                    strokeWidth="1.8"
+                    size={24}
                 />
                  {productsQuantityInCart !== 0 ? 
                  <span className={styles.counter}>

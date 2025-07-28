@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Root from "./layout/Root";
+import Layout from "./layout/Layout";
 import ErrorPage from "./pages/ErrorPage";
 import Home from "./pages/home/Home";
 import Shop from "./pages/shop/Shop";
@@ -13,12 +13,12 @@ const Router = ({
                 addProductToCart, 
                 removeProductFromCart, 
                 cartProducts, 
-                setCartProducts 
+                setCartProducts               
                }) => {   
     const router = createBrowserRouter([
         {
             path:'/',
-            element: <Root productsQuantityInCart={productsQuantityInCart} />,
+            element: <Layout productsQuantityInCart={productsQuantityInCart} />,
             errorElement: <ErrorPage />,
             children: [
                         { 

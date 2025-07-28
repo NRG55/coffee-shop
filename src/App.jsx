@@ -3,7 +3,7 @@ import { useState } from 'react';
 import toast, {Toaster} from 'react-hot-toast';
 
 function App() {
-    const [cartProducts, setCartProducts] = useState({}); // {productId1 : quantity, productId2: quantity, ...}
+    const [cartProducts, setCartProducts] = useState({}); // {productId1 : quantity, productId2: quantity, ...}   
 
     const addProductToCart = (productId, quantity, isShoppingCart=false) => {
         if (cartProducts.hasOwnProperty(productId) && !isShoppingCart) {
@@ -42,7 +42,7 @@ function App() {
                 removeProductFromCart={removeProductFromCart}
                 productsQuantityInCart={productsQuantityInCart()}
                 cartProducts={cartProducts}
-                setCartProducts={setCartProducts}                           
+                setCartProducts={setCartProducts}                                        
             />
             <Toaster position="top-right" />
         </>

@@ -5,3 +5,9 @@
     max-width: 1400px;
     margin: auto;
 }
+
+@media (max-width: 768px) {
+    .mainContainer {
+        grid-template-columns: 1fr;
+    }   
+}

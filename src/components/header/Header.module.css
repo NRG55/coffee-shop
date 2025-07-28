@@ -19,8 +19,10 @@
     padding: 0 1.5rem;
 }
 
-.shoppingCartAndMobileNavWrapper {
-    display: flex;  
+.navMobileAndLogoWrapper,
+.searchMobileAndShoppingCartWrapper {
+    display: flex; 
+    place-items: center; 
 }
 
 .whiteTextAndIcon {   
@@ -60,7 +62,8 @@
 }
 
 @media (max-width: 768px) {
-    .shoppingCartAndMobileNavWrapper {    
-       gap: 2rem;
+    .navMobileAndLogoWrapper,
+    .searchMobileAndShoppingCartWrapper {
+        gap: 2rem;
     }   
 }

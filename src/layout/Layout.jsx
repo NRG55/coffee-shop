@@ -3,7 +3,7 @@ import Footer from "../components/footer/Footer";
 import { Outlet } from "react-router-dom";
 import ScrollToTop from "../components/scrollToTop/ScrollToTop";
 
-const Root = ({ productsQuantityInCart }) => {
+const Layout = ({ productsQuantityInCart }) => {
     return (
         <>        
             <Header productsQuantityInCart={productsQuantityInCart} />
@@ -16,4 +16,4 @@ const Root = ({ productsQuantityInCart }) => {
     );
 };
 
-export default Root;
+export default Layout;

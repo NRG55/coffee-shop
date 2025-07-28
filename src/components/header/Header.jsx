@@ -6,10 +6,11 @@ import NavMobile from '../navMobile/NavMobile';
 import ScrollDownArrow from '../scrollDownArrow/ScrollDownArrow';
 import { useState } from 'react';
 import ShoppingCartButton from '../shoppingCartButton/ShoppingCartButton';
+import FilterMobile from '../filterMobile/FilterMobile';
 
 const Header = ({ productsQuantityInCart }) => {
     const [isHeaderTransparent, setHeaderTransparent] = useState(true);
-    const [isOpen, setIsOpen] = useState(false);
+   
     const { pathname } = useLocation();
   
     const setHeaderNonTransparent = () => {
@@ -32,12 +33,15 @@ const Header = ({ productsQuantityInCart }) => {
                                 ${!isHeaderTransparent &&
                                 pathname !== "/" ? styles.whiteBackground : ""}                            
                                 `}
-                >               
-                    <Logo />
-                    <Navbar />
-                    <div className={styles.shoppingCartAndMobileNavWrapper}>
-                        <ShoppingCartButton productsQuantityInCart={productsQuantityInCart} /> 
-                        <NavMobile isOpen={isOpen} setIsOpen={setIsOpen}/>
+                >  
+                    <div className={styles.navMobileAndLogoWrapper}>      
+                        <NavMobile />                              
+                        <Logo />
+                    </div>
+                    <Navbar />                    
+                    <div className={styles.searchMobileAndShoppingCartWrapper}>
+                        <FilterMobile />
+                        <ShoppingCartButton productsQuantityInCart={productsQuantityInCart} />                        
                     </div>                  
                 </div>                
             </header>

@@ -1,5 +1,19 @@
+.openButton {
+    cursor: pointer;   
+    position: relative;   
+    background-color: transparent;    
+    border: none;
+    display: none;
+}
+
 .filterContainer { 
-    padding: 1.5rem;     
+    display: none;   
+    position: fixed;
+    top: 5rem;
+    right: 0;  
+    padding: 3rem 1.5rem 1.5rem 1.5rem;     
+    background-color: white;
+    animation: moveLeft .2s;     
     
     h3 {
         font-size: 1rem;
@@ -16,7 +30,8 @@
     
     label,
     button {
-        height: 1.8rem;       
+        height: 1.8rem; 
+        width: 10rem;      
         font-size: .9rem;
         font-weight: 350;   
     }
@@ -41,6 +56,23 @@
     button:focus {
         background-color: rgb(243, 229, 208);
     }
+
+    .closeButton {
+        position: absolute;       
+        top: 1.5rem;
+        right: 1.5rem;
+        display: grid;
+        place-items: center;
+        width: 1.8rem;
+        height: 1.8rem;
+        background: none;
+        padding: 0;
+    }
+
+    .closeButton:hover {
+        color: rgb(245, 52, 52);
+        background: none;
+    }
 }
 
 .active {
@@ -53,7 +85,7 @@
 }
 
 .section {
-    padding-bottom: 1.5rem;
+    padding-bottom: .5rem;
 }
 
 .inputsContainer {
@@ -130,15 +162,23 @@
 
 @media (max-width: 768px) {
     .filterContainer {
-        display: none;
+        display: block;       
     }   
 }
 
+@keyframes moveLeft {
+    0% {
+        right: -12rem;
+    }
 
+    100% {
+        right: 0;
+    }    
+}
 
-
-
- 
-
-  
-
+@media (max-width: 768px) {
+    .openButton {
+        display: grid;
+        place-items: center;
+    }   
+}

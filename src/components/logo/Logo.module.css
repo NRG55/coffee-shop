@@ -1,3 +1,9 @@
 .logoWrapper img {
-     width: 3rem;    
+    width: 3rem;    
+}
+
+@media (max-width: 768px) {
+    .logoWrapper img {
+        width: 2rem;    
+    }  
 }
