@@ -4,6 +4,7 @@ import QuantityInput from '../../components/quantityInput/QuantityInput';
 import { useParams, Link } from 'react-router-dom';
 import { getProductById } from '../../utils/filter';
 import getImage from "../../utils/getImage";
+import PropTypes from 'prop-types';
 
 
 const ProductPage = ({ addProductToCart }) => {
@@ -42,15 +43,19 @@ const ProductPage = ({ addProductToCart }) => {
                             onClick={handleClick}
                         >
                             Add to Cart
-                        </button>
-                        <Link to="/shop/all">
-                            <button className={styles.continueShoppingButton}>Continue shopping</button>
-                        </Link>
+                        </button>                       
                     </div>
+                    <Link to="/shop/all">
+                        <button className={styles.continueShoppingButton}>Continue shopping</button>
+                    </Link>
                 </div> 
             </div>      
         </section>
     );
 };
+
+ProductPage.propTypes = {
+    addProductToCart: PropTypes.func
+}
 
 export default ProductPage;

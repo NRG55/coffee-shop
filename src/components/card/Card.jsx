@@ -1,4 +1,5 @@
 import styles from './Card.module.css';
+import PropTypes from 'prop-types';
 import getImage from "../../utils/getImage";
 import { Link } from 'react-router-dom';
 
@@ -19,5 +20,9 @@ const Card = ({ product }) => {
         </article>
     );
 };
+
+Card.propTypes = {
+    product: PropTypes.object.isRequired
+}
 
 export default Card;

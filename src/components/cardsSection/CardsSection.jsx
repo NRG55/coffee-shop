@@ -1,4 +1,5 @@
 import styles from './CardsSection.module.css';
+import PropTypes from 'prop-types';
 import { useMemo } from 'react';
 import Card from "../card/Card";
 import { getProducts } from '../../utils/filter';
@@ -64,5 +65,14 @@ const CardsSection = () => {
     );
         
 };
+
+CardsSection.propTypes = {
+    productsByBrand: PropTypes.array.isRequired,
+    filteredProducts: PropTypes.array.isRequired,
+    productsOnPage: PropTypes.array.isRequired,
+    product: PropTypes.object.isRequired,
+    currentPage: PropTypes.number.isRequired,
+    pageSize: PropTypes.number.isRequired
+}
 
 export default CardsSection;

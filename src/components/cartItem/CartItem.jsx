@@ -1,4 +1,5 @@
 import styles from './CartItem.module.css';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import getImage from '../../utils/getImage';
 import QuantityInput from '../quantityInput/QuantityInput';
@@ -42,5 +43,17 @@ const CartItem = ({ productId, productsQuantities, setProductsQuantities, addPro
         </article>
     );
 };
+
+CartItem.propTypes = {
+    productId: PropTypes.number.isRequired,
+    productsQuantities: PropTypes.object.isRequired,
+    setProductsQuantities: PropTypes.func.isRequired,
+    setProductQuantity: PropTypes.func.isRequired,
+    productQuantity: PropTypes.number.isRequired,    
+    addProductToCart: PropTypes.func.isRequired,
+    removeProductFromCart: PropTypes.func.isRequired,
+    productObject: PropTypes.object.isRequired,
+    productImage: PropTypes.string.isRequired
+}
 
 export default CartItem;

@@ -29,3 +29,27 @@
 .imageWrapper img {
     width: 100%;
 }
+
+@media (max-width: 768px) {
+    .section {        
+        padding: 3rem;    
+    }
+    .container > div {        
+        grid-template-columns: 1fr; 
+        margin-bottom: 1rem;   
+    } 
+
+    .container .info {   
+        padding: 1.5rem 0;
+    } 
+    
+    .imageWrapper:nth-of-type(1)  {
+        order: 1;        
+    }
+}
+
+@media (max-width: 600px) {
+    .section {        
+        padding: 1.5rem;    
+    }   
+}

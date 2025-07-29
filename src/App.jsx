@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Router from './Router';
 import { useState } from 'react';
 import toast, {Toaster} from 'react-hot-toast';
@@ -44,9 +45,15 @@ function App() {
                 cartProducts={cartProducts}
                 setCartProducts={setCartProducts}                                        
             />
-            <Toaster position="top-right" />
+            <Toaster position="bottom-right" />
         </>
     );   
 };
+
+App.propTypes = {
+    productId: PropTypes.number.isRequired,
+    quantity: PropTypes.number.isRequired,
+    cartProducts: PropTypes.object.isRequired
+}
 
 export default App;

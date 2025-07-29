@@ -83,10 +83,6 @@
     color: rgb(94, 93, 93);
 }
 
-@media (max-width: 991px) {
-   
-}
-
 @media (max-width: 768px) {
     .container {
         width: 100%;

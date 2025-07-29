@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import PropTypes from "prop-types";
 import Layout from "./layout/Layout";
 import ErrorPage from "./pages/ErrorPage";
 import Home from "./pages/home/Home";
@@ -60,5 +61,13 @@ const Router = ({
         <RouterProvider router={router} />
     );
 };
+
+Router.propTypes = {
+    productsQuantityInCart: PropTypes.number.isRequired,
+    addProductToCart: PropTypes.func.isRequired,
+    removeProductFromCart: PropTypes.func.isRequired,
+    cartProducts: PropTypes.object.isRequired,
+    setCartProducts: PropTypes.func.isRequired
+}
 
 export default Router;

@@ -74,6 +74,16 @@
         margin-top: 4rem;
         max-width: 100%;
         padding: 0 3rem;
-    }   
+    }  
+    
+    .infoContainer p {        
+        max-width: 80%;             
+    }
+}
+
+@media (max-width: 600px) {     
+    .infoContainer p {        
+        max-width: 100%;             
+    }
 }
 

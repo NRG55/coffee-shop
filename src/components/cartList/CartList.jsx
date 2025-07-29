@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from './CartList.module.css';
 import CartItem from '../cartItem/CartItem';
 import { useState } from 'react';
@@ -20,5 +21,13 @@ const CartList = ({ cartProducts, addProductToCart, removeProductFromCart }) => 
         </>
     );
 };
+
+CartList.propTypes = {
+    cartProducts: PropTypes.object.isRequired,
+    cartProduct: PropTypes.object.isRequired,
+    addProductToCart: PropTypes.func.isRequired,
+    removeProductFromCart: PropTypes.func.isRequired,
+    productsQuantities: PropTypes.object.isRequired
+}
 
 export default CartList;

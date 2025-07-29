@@ -1,4 +1,5 @@
 import styles from './Header.module.css';
+import PropTypes from 'prop-types';
 import { useLocation } from 'react-router-dom';
 import Logo from '../logo/Logo';
 import Navbar from "../navbar/Navbar";
@@ -51,5 +52,10 @@ const Header = ({ productsQuantityInCart }) => {
                           
     );
 };
+
+Header.propTypes = {
+    productsQuantityInCart: PropTypes.number,
+    pathname: PropTypes.string
+}
 
 export default Header;

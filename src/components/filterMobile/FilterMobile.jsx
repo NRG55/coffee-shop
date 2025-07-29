@@ -1,4 +1,5 @@
 import styles from './FilterMobile.module.css';
+import PropTypes from 'prop-types';
 import { Link, useLocation } from "react-router-dom";
 import { Search, X } from "lucide-react";
 import { useClickAway } from 'react-use';
@@ -100,5 +101,14 @@ const FilterMobile = () => {
                 </div> 
     );
 };
+
+FilterMobile.propTypes = {
+    brands: PropTypes.array,
+    coffeeTypes: PropTypes.array,
+    getCoffeeTypes: PropTypes.func.isRequired,
+    coffeeTypesParams: PropTypes.array,
+    coffeeTypesByBrand: PropTypes.array,
+    brand: PropTypes.string
+}
 
 export default FilterMobile;

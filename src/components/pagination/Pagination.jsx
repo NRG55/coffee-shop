@@ -1,4 +1,5 @@
 import styles from './Pagination.module.css';
+import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from "uuid";
 import { usePagination, DOTS } from '../../utils/usePagination';
 
@@ -58,6 +59,14 @@ const Pagination = (props) => {
         </ul>
     );
 };
+
+Pagination.propTypes = {
+    onPageChange: PropTypes.func,
+    totalCount: PropTypes.number,
+    siblingCount: PropTypes.number,
+    currentPage: PropTypes.number,
+    pageSize: PropTypes.number
+}
 
 export default Pagination;
 

@@ -8,9 +8,7 @@ const Footer = () => {
                     <div className={styles.about}>
                         <h2>About Us</h2>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium 
-                            neque ut voluptatibus vitae repudiandae nihil fuga sit aspernatur 
-                            itaque sunt!
+                            We're a family-owned coffee shop dedicated to bringing you the freshest, most flavorful beans from around the world.
                         </p>
                         <ul className={styles.iconsContainer}>
                             <li><a href='#'><i className="fa-brands fa-square-facebook"></i></a></li>

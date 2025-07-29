@@ -1,4 +1,5 @@
 import styles from './Filter.module.css';
+import PropTypes from 'prop-types';
 import brands from '../../data/brands';
 import coffeeTypes from '../../data/coffeeTypes';
 import { Link } from "react-router-dom";
@@ -74,6 +75,15 @@ const Filter = () => {
             </div>            
         </>
     );
+}
+
+Filter.propTypes = {
+    brands: PropTypes.array,
+    coffeeTypes: PropTypes.array,
+    getCoffeeTypes: PropTypes.func.isRequired,
+    coffeeTypesParams: PropTypes.array,
+    coffeeTypesByBrand: PropTypes.array,
+    brand: PropTypes.string
 }
 
 export default Filter;
