@@ -32,16 +32,27 @@ describe('Header', () => {
         renderHeader();
 
         const list = screen.getByRole('list');
-        const home = screen.getByText('Home').closest('a');
-        const shop = screen.getByText("Shop").closest('a');
-        const about = screen.getByText("About").closest('a');
+        const home = screen.getByText('HOME').closest('a');
+        const shop = screen.getByText("SHOP").closest('a');
+        const about = screen.getByText("ABOUT").closest('a');
 
         expect(list).toContainElement(home);
         expect(list).toContainElement(shop);
         expect(list).toContainElement(about);
 
         expect(home).toHaveAttribute('href', '/');
-        expect(shop).toHaveAttribute("href", '/shop');
+        expect(shop).toHaveAttribute("href", '/shop/all');
         expect(about).toHaveAttribute("href", '/about');
+    });
+
+     it('should have a shopping cart button linking to "/shopping-cart"', () => {
+        renderHeader();
+
+        const shoppingCartButton = screen.getByRole('button', {name: /shopping cart/i});
+        const link = shoppingCartButton.closest('a');          
+
+        expect(shoppingCartButton).toBeInTheDocument();
+        expect(link).toHaveAttribute('href', '/shopping-cart');
+        ;   
     });
 });
