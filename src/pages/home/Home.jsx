@@ -9,7 +9,7 @@ const Home = () => {
         <div className={styles.container}>
             <section className={styles.section}>
                 <div className={styles.backgroundImageContainer}>
-                    <img src={backgroundImage} alt=""/>
+                    <img src={backgroundImage} alt="Hero"/>
                 </div>
                 <div className={styles.infoContainer}>
                     <h1>Find Your Flavor</h1>

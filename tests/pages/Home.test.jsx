@@ -26,6 +26,12 @@ describe('Home page', () => {
         
         expect(popularNowHeading).toBeInTheDocument();
         expect(choosingUsHeading).toBeInTheDocument();
-    });    
+    });  
+    
+    it('should have a hero image', () => {
+        const heroImage = screen.getByRole("img", {name: /hero/i});
+       
+        expect(heroImage).toBeInTheDocument()
+    });
 });
 
