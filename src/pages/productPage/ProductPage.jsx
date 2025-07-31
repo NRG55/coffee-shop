@@ -34,6 +34,7 @@ const ProductPage = ({ addProductToCart }) => {
                     </div>           
                     <div className={styles.addToCartContainer}>      
                         <QuantityInput
+                            productId={productId}
                             productQuantity={productQuantity}
                             setProductQuantity={setProductQuantity} 
                         />

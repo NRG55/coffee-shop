@@ -5,8 +5,8 @@ import './slider.css';
 import styles from './PopularProducts.module.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Navigation, Pagination, Autoplay } from 'swiper/modules';
-import { getPopularProducts } from '../../utils/filter';
-import getImage from '../../utils/getImage';
+import { getPopularProducts } from '../../../utils/filter';
+import getImage from '../../../utils/getImage';
 import { Link } from 'react-router-dom';
 
 const PopularProducts = () => {

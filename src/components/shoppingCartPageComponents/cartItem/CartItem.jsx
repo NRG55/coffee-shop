@@ -1,9 +1,9 @@
 import styles from './CartItem.module.css';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import getImage from '../../utils/getImage';
-import QuantityInput from '../quantityInput/QuantityInput';
-import { getProductById } from '../../utils/filter';
+import getImage from '../../../utils/getImage';
+import QuantityInput from '../../quantityInput/QuantityInput';
+import { getProductById } from '../../../utils/filter';
 
 const CartItem = ({ productId, productsQuantities, setProductsQuantities, addProductToCart, removeProductFromCart }) => {
     const isShoppingCart = true; 
@@ -33,7 +33,8 @@ const CartItem = ({ productId, productsQuantities, setProductsQuantities, addPro
                 <button onClick={() => removeProductFromCart(productId)}>Delete</button>
                 <div>
                 <p className={styles.productPrice}>price: €{productObject.price}</p>
-                <QuantityInput                        
+                <QuantityInput 
+                        productId={productId}                       
                         productQuantity={productsQuantities[productId]}
                         setProductQuantity={setProductQuantity}                                            
                 />

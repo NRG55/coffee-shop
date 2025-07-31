@@ -4,10 +4,10 @@ import { Link, useLocation } from "react-router-dom";
 import { Search, X } from "lucide-react";
 import { useClickAway } from 'react-use';
 import { useState, useRef } from 'react';
-import brands from '../../data/brands';
-import coffeeTypes from '../../data/coffeeTypes';
+import brands from '../../../../data/brands';
+import coffeeTypes from '../../../../data/coffeeTypes';
 import { useParams, useSearchParams } from 'react-router-dom';
-import { getCoffeeTypes } from '../../utils/filter';
+import { getCoffeeTypes } from '../../../../utils/filter';
 
 const FilterMobile = () => {
     const [searchParams, setSearchParams] = useSearchParams();

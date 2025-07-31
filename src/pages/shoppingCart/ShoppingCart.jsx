@@ -1,5 +1,5 @@
 import styles from './ShoppingCart.module.css';
-import CartList from '../../components/cartList/CartList';
+import CartList from '../../components/shoppingCartPageComponents/cartList/CartList';
 import { getProductById } from '../../utils/filter';
 import { Link } from 'react-router-dom';
 

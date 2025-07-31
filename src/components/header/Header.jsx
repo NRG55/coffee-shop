@@ -1,13 +1,13 @@
 import styles from './Header.module.css';
 import PropTypes from 'prop-types';
 import { useLocation } from 'react-router-dom';
-import Logo from '../logo/Logo';
-import Navbar from "../navbar/Navbar";
-import NavMobile from '../navMobile/NavMobile';
-import ScrollDownArrow from '../scrollDownArrow/ScrollDownArrow';
+import Logo from './headerComponents/logo/Logo';
+import Navbar from './headerComponents/navbar/Navbar';
+import NavMobile from './headerComponents/navMobile/NavMobile';
+import ScrollDownArrow from '../homePageComponents/scrollDownArrow/ScrollDownArrow';
 import { useState } from 'react';
-import ShoppingCartButton from '../shoppingCartButton/ShoppingCartButton';
-import FilterMobile from '../filterMobile/FilterMobile';
+import ShoppingCartButton from './headerComponents/shoppingCartButton/ShoppingCartButton';
+import FilterMobile from './headerComponents/filterMobile/FilterMobile';
 
 const Header = ({ productsQuantityInCart }) => {
     const [isHeaderTransparent, setHeaderTransparent] = useState(true);
@@ -45,9 +45,7 @@ const Header = ({ productsQuantityInCart }) => {
                         <ShoppingCartButton productsQuantityInCart={productsQuantityInCart} />                        
                     </div>                  
                 </div>                
-            </header>
-            {isHeaderTransparent &&
-             useLocation().pathname === "/" ? <ScrollDownArrow /> : null}
+            </header>            
         </>                            
                           
     );

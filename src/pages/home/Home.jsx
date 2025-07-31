@@ -1,10 +1,24 @@
 import styles from './Home.module.css';
 import backgroundImage from '/src/images/background/home-background.jpg';
-import PopularProducts from '../../components/popularProducts/PopularProducts';
-import ChooseUs from '../../components/chooseUs/ChooseUs.';
+import ScrollDownArrow from '../../components/homePageComponents/scrollDownArrow/ScrollDownArrow';
+import PopularProducts from '../../components/homePageComponents/popularProducts/PopularProducts';
+import ChooseUs from '../../components/homePageComponents/chooseUs/ChooseUs.';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const Home = () => {   
+const Home = () => { 
+    const [isScrollDownArrow, setScrollDownArray] = useState(true); 
+    
+    const handleScroll = () => {
+        if (window.scrollY >= 1) {
+            return setScrollDownArray(false);
+        };
+
+        setScrollDownArray(true);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    
     return (
         <div className={styles.container}>
             <section className={styles.section}>
@@ -17,7 +31,8 @@ const Home = () => {
                     <Link to="./shop/all">
                         <button className={styles.button}>Shop Now</button>
                     </Link>               
-                </div>                
+                </div> 
+                {isScrollDownArrow ? <ScrollDownArrow /> : null}               
             </section>
             <PopularProducts />
             <ChooseUs />

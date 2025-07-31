@@ -1,10 +1,10 @@
 import styles from './Filter.module.css';
 import PropTypes from 'prop-types';
-import brands from '../../data/brands';
-import coffeeTypes from '../../data/coffeeTypes';
+import brands from '../../../data/brands';
+import coffeeTypes from '../../../data/coffeeTypes';
 import { Link } from "react-router-dom";
 import { useParams, useSearchParams } from 'react-router-dom';
-import { getCoffeeTypes } from '../../utils/filter';
+import { getCoffeeTypes } from '../../../utils/filter';
 
 const Filter = () => { 
     const [searchParams, setSearchParams] = useSearchParams();

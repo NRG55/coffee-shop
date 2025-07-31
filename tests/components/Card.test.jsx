@@ -1,4 +1,4 @@
-import Card from "../../src/components/card/Card";
+import Card from "../../src/components/shopPageComponents/card/Card";
 import { it, expect, describe } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";

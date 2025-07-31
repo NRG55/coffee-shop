@@ -1,13 +1,15 @@
 import styles from './QuantityInput.module.css';
 import PropTypes from "prop-types";
-import { Plus, Minus } from "lucide-react"; 
+import { Plus, Minus } from "lucide-react";  
 
-const QuantityInput = ({                   
+const QuantityInput = ({
+                    productId,                   
                     productQuantity, 
                     setProductQuantity                  
                     }) => { 
                 
     const handleChange = (event) => {
+        event.prevent.default();
         const inputValue = Number(event.target.value);      
 
         if (inputValue >= 1) {
@@ -25,6 +27,7 @@ const QuantityInput = ({
                 <Minus size={16} />
             </button>
             <input
+                id={`input-${productId}`}                
                 type="number"
                 value={productQuantity}                             
                 className={styles.numberInput}               

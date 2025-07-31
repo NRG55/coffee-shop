@@ -2,7 +2,7 @@ import styles from './CardsSection.module.css';
 import PropTypes from 'prop-types';
 import { useMemo } from 'react';
 import Card from "../card/Card";
-import { getProducts } from '../../utils/filter';
+import { getProducts } from '../../../utils/filter';
 import { useParams, useSearchParams } from 'react-router-dom';
 import Pagination from '../pagination/Pagination';
 
