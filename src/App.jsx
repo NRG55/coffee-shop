@@ -6,21 +6,21 @@ import toast, {Toaster} from 'react-hot-toast';
 function App() {
     const [cartProducts, setCartProducts] = useState({}); // {productId1 : quantity, productId2: quantity, ...}   
 
-    const addProductToCart = (productId, quantity, isShoppingCart=false) => {
-        if (cartProducts.hasOwnProperty(productId) && !isShoppingCart) {
+    const addProductToCart = (productId, quantity, isProductPage=false) => {
+        if (cartProducts.hasOwnProperty(productId) && isProductPage) {
             setCartProducts((previousCartProducts) => ({
                 ...previousCartProducts,
                 [productId]: previousCartProducts[productId] + quantity
             }));
 
-            toast.success("Added to cart");
+            toast.success("Added to your shopping cart");
         } else {
             setCartProducts((previousCartProducts) => ({
                 ...previousCartProducts,
                 [productId]: quantity
             }));
 
-            toast.success("Cart is updated");
+            toast.success("Shopping cart is updated");
         };        
     };
 

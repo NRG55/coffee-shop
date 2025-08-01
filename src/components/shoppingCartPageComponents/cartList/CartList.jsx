@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
-import styles from './CartList.module.css';
 import CartItem from '../cartItem/CartItem';
 import { useState } from 'react';
+import { getProductById } from '../../../utils/filter';
+import getImage from '../../../utils/getImage';
 
 const CartList = ({ cartProducts, addProductToCart, removeProductFromCart }) => {
     const [productsQuantities, setProductsQuantities] = useState(cartProducts);
@@ -12,7 +13,8 @@ const CartList = ({ cartProducts, addProductToCart, removeProductFromCart }) => 
            // cartProduct[0] -> product id, cartProduct[1] -> product quantity 
                 <CartItem 
                     key={"cartItem" + cartProduct[0]} 
-                    productId={cartProduct[0]} 
+                    product={getProductById(cartProduct[0])}
+                    imageUrl={getImage(cartProduct[0])} 
                     productsQuantities={productsQuantities}                    
                     setProductsQuantities={setProductsQuantities}                   
                     addProductToCart={addProductToCart}
@@ -23,8 +25,7 @@ const CartList = ({ cartProducts, addProductToCart, removeProductFromCart }) => 
 };
 
 CartList.propTypes = {
-    cartProducts: PropTypes.object.isRequired,
-    cartProduct: PropTypes.object.isRequired,
+    cartProducts: PropTypes.object.isRequired,   
     addProductToCart: PropTypes.func.isRequired,
     removeProductFromCart: PropTypes.func.isRequired,
     productsQuantities: PropTypes.object.isRequired

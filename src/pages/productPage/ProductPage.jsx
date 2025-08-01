@@ -13,9 +13,11 @@ const ProductPage = ({ addProductToCart }) => {
     const { productId } = useParams();
     const product = getProductById(productId);
     const imageUrl = getImage(product.id);
+    const isProductPage = true;
     
     const handleClick = () => {
-        addProductToCart(productId, productQuantity);    
+        addProductToCart(productId, productQuantity, isProductPage);
+        setProductQuantity(1);    
     };
 
     return (

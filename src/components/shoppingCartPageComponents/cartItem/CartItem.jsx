@@ -1,60 +1,60 @@
 import styles from './CartItem.module.css';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import getImage from '../../../utils/getImage';
 import QuantityInput from '../../quantityInput/QuantityInput';
-import { getProductById } from '../../../utils/filter';
 
-const CartItem = ({ productId, productsQuantities, setProductsQuantities, addProductToCart, removeProductFromCart }) => {
-    const isShoppingCart = true; 
-    const productImage = getImage(productId);
-    const productObject = getProductById(productId);   
-
+const CartItem = ({ 
+        product,
+        imageUrl, 
+        productsQuantities, 
+        setProductsQuantities, 
+        addProductToCart, 
+        removeProductFromCart 
+    }) => {
     const setProductQuantity = (newQuantity) => {
         setProductsQuantities((previousProductsQuantities) => ({
           ...previousProductsQuantities,
-                            [productId]: newQuantity,
+                            [product.id]: newQuantity,
         }));
 
-        addProductToCart(productId, newQuantity, isShoppingCart)
+        addProductToCart(product.id, newQuantity)
     };   
 
     return (
         <article className={styles.cartItem}>
-            <Link to={`/product/${productObject.brand}/${productId}`}>
+            <Link to={`/product/${product.brand}/${product.id}`}>
                 <div className={styles.imageWrapper}>
-                    <img src={productImage}/>
+                    <img src={imageUrl}/>
                 </div>
             </Link>
             <div className={styles.rightContainer}>
-                <Link to={`/product/${productObject.brand}/${productId}`}>
-                    <p className={styles.productName}>{productObject.name}</p>                   
+                <Link to={`/product/${product.brand}/${product.id}`}>
+                    <p className={styles.productName}>{product.name}</p>                   
                 </Link>
-                <button onClick={() => removeProductFromCart(productId)}>Delete</button>
+                <button onClick={() => removeProductFromCart(product.id)}>Delete</button>
                 <div>
-                <p className={styles.productPrice}>price: €{productObject.price}</p>
+                <p className={styles.productPrice}>price: €{product.price}</p>
                 <QuantityInput 
-                        productId={productId}                       
-                        productQuantity={productsQuantities[productId]}
+                        productId={product.id}                       
+                        productQuantity={productsQuantities[product.id]}
                         setProductQuantity={setProductQuantity}                                            
                 />
                 </div>
-                <p className={styles.subtotal}>€{Math.round(productObject.price * productsQuantities[productId] * 100) / 100}</p>
+                <p className={styles.subtotal}>€{Math.round(product.price * productsQuantities[product.id] * 100) / 100}</p>
             </div>            
         </article>
     );
 };
 
-CartItem.propTypes = {
-    productId: PropTypes.number.isRequired,
+CartItem.propTypes = {    
     productsQuantities: PropTypes.object.isRequired,
     setProductsQuantities: PropTypes.func.isRequired,
     setProductQuantity: PropTypes.func.isRequired,
     productQuantity: PropTypes.number.isRequired,    
     addProductToCart: PropTypes.func.isRequired,
     removeProductFromCart: PropTypes.func.isRequired,
-    productObject: PropTypes.object.isRequired,
-    productImage: PropTypes.string.isRequired
+    product: PropTypes.object.isRequired,
+    imageUrl: PropTypes.string.isRequired
 }
 
 export default CartItem;

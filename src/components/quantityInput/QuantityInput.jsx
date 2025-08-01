@@ -29,10 +29,12 @@ const QuantityInput = ({
             <input
                 id={`input-${productId}`}                
                 type="number"
+                name="quantity"
                 value={productQuantity}                             
                 className={styles.numberInput}               
                 onChange={handleChange}
                 min="1"
+                aria-label="quantity"
             />
             <button
                 type="button"
