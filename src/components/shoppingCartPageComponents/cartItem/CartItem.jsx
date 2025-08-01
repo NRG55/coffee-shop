@@ -24,7 +24,7 @@ const CartItem = ({
         <article className={styles.cartItem}>
             <Link to={`/product/${product.brand}/${product.id}`}>
                 <div className={styles.imageWrapper}>
-                    <img src={imageUrl}/>
+                    <img src={imageUrl} alt="product"/>
                 </div>
             </Link>
             <div className={styles.rightContainer}>

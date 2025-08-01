@@ -18,7 +18,7 @@ describe('Home page', () => {
         expect(paragraph).toBeInTheDocument();
         expect(shopNowButton).toBeInTheDocument();
         expect(link).toHaveAttribute('href', '/shop/all');
-        });
+    });
 
     it('should render "Popular Now" and "Why choosing us" headings', () => {
         const popularNowHeading = screen.getByText(/popular now/i);
