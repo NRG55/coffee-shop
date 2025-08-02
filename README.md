@@ -1,5 +1,7 @@
 # Coffee Shop
 
+[Live Version](https://nrg-coffee-shop.netlify.app/) 
+
 A mock e-commerce site built in ReactJS, this project focuses on practising routing, automated testing (Vitest, React Testing Library) and styling React apps (CSS modules). All pages are responsive on desktop, tablet and mobile screens. 
 
 ![Home page](./public/screenshots/home-page-screenshot.png)
