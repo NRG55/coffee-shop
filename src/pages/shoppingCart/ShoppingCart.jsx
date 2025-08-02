@@ -2,6 +2,7 @@ import styles from './ShoppingCart.module.css';
 import CartList from '../../components/shoppingCartPageComponents/cartList/CartList';
 import { getProductById } from '../../utils/filter';
 import { Link } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 const ShoppingCart = ({ cartProducts, addProductToCart, removeProductFromCart }) => {
     const isEmpty = Object.keys(cartProducts).length === 0;
@@ -49,9 +50,14 @@ const ShoppingCart = ({ cartProducts, addProductToCart, removeProductFromCart })
                     <Link to="/shop/all">
                         <button className={styles.backToShopButton}>Back to Shop</button>
                     </Link>
-                    <button className={styles.checkoutButton}>Check out</button>
+                    <button 
+                        className={styles.checkoutButton} 
+                        onClick={() => toast("Thank you for your order.\n We hope you love it!")}                        
+                    >
+                        Check out
+                    </button>
                 </div>
-            </div>
+            </div>          
         </section>
     );   
 };
