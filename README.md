@@ -4,8 +4,9 @@
 
 A mock e-commerce site built in ReactJS, this project focuses on practising routing, automated testing (Vitest, React Testing Library) and styling React apps (CSS modules). All pages are responsive on desktop, tablet and mobile screens. 
 
-![Home page](./public/screenshots/home-page-screenshot.png)
-![Product page](./public/screenshots/product-page-screenshot.png)
+Home Page             |  Product Page
+:-------------------------:|:-------------------------: 
+![](./public/screenshots/home-page-screenshot.png)  |  ![](./public/screenshots/product-page-screenshot.png) 
 
 ## Acknowledgements
 
