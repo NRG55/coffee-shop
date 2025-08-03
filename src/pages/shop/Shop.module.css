@@ -1,7 +1,6 @@
 .mainContainer {    
     display: grid;
     grid-template-columns: 15rem auto;
-    min-height: calc(100vh - 5rem); 
     max-width: 1200px;
     margin: auto;
 }

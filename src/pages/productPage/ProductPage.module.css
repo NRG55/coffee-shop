@@ -6,7 +6,7 @@
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
     padding: 3rem 8rem;
     gap: 4rem; 
     font-size: .9rem;   

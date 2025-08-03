@@ -1,11 +1,11 @@
 .section { 
-    min-height: calc(100vh - 5rem);
-    padding: 4rem 2rem;    
+    min-height: calc(100vh - 5rem);     
 }
 
 .container {
     max-width: 1200px;
     margin: auto;
+    padding: 4rem 0;  
 }
 
 .container > div {
@@ -27,7 +27,13 @@
 }
 
 .imageWrapper img {
-    width: 100%;
+    width: 100%;   
+}
+
+@media (max-width: 1200px) {
+    .container {        
+        padding: 4rem 2rem;    
+    }   
 }
 
 @media (max-width: 768px) {

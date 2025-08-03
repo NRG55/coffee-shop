@@ -26,14 +26,14 @@ const Header = ({ productsQuantityInCart }) => {
  
     return (
         <>
-            <header className={styles.header }>
-                <div className={`${styles.container} 
+            <header className={`${styles.header} 
                                 ${pathname === "/" ? styles.whiteTextAndIcon : styles.blackTextAndIcon}
                                 ${!isHeaderTransparent &&
                                 pathname === "/" ? styles.blackBackground : ""}
                                 ${!isHeaderTransparent &&
                                 pathname !== "/" ? styles.whiteBackground : ""}                            
-                                `}
+                                `}>
+                <div className={styles.container}
                 >  
                     <div className={styles.navMobileAndLogoWrapper}>      
                         <NavMobile />                              
